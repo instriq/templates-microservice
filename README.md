@@ -7,6 +7,7 @@
 
 ### Summary
 
+Writing vulnerability reports is a time-consuming task. This microservice provides a set of templates to help you write vulnerability reports faster and more efficiently.
 
 ---
 
@@ -41,7 +42,3 @@ docker run -d -p 9090:80 vuln-templates
 - This work is licensed under [MIT License.](/LICENSE.md)
 
 ---
-
-### References
-
-1. 
