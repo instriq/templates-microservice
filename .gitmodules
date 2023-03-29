@@ -1,0 +1,3 @@
+[submodule "vulnerability-templates"]
+	path = vulnerability-templates
+	url = https://github.com/ferwin-research/vulnerability-templates
