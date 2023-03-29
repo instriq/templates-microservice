@@ -1,0 +1,1 @@
+requires "Mojolicious::Plugin::I18N", "";
