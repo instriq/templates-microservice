@@ -16,13 +16,13 @@ get "/templates" => sub {
     my $id     = $self -> param("id");
     my $result = [];
 
-    my $yaml  = YAML::XS::LoadFile("templates/files.yml");
+    my $yaml  = YAML::XS::LoadFile("vulnerability-templates/files.yml");
     my $files = $yaml -> {"files"};
 
     foreach my $hash (@$files) {
         foreach my $key (keys %$hash) {
             my $value = $hash -> {$key};
-            my $load  = YAML::XS::LoadFile("templates/$value.yml");
+            my $load  = YAML::XS::LoadFile("vulnerability-templates/$value.yml");
 
             if ($load) {
                 my $template = $load -> {"vulnerability"};
