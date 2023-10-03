@@ -1,0 +1,12 @@
+vulnerability:
+  name: Comentários em códigos no front-end
+  type: web
+  category: Other
+  description:
+    pt-br: Em várias partes do código, podemos ver comentários feitos pelos desenvolvedores, isso pode se tornar um incidente de segurança quando alguma informação sensível é comentada e/ou ajuda o invasor a entender mais sobre o aplicativo de destino.
+    en: In several parts of the code, we can see comments made by the developers, this can become a security incident when some sensitive information is commented and/or help the attacker to understand more about the target application.
+  recommendation:
+    pt-br: Remova todos os comentários quando o aplicativo entrar em produção.
+    en: Remove all comments when the application goes into production.
+  references:
+    - https://cwe.mitre.org/data/definitions/615.html
