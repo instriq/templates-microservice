@@ -1,6 +1,6 @@
 <p align="center">
   <h3 align="center"><b>Vulnerabilities Templates Micro-service</b></h3>
-  <p align="center">Service to provide vulnerability templates through an HTTP app/JSON responses</p>
+  <p align="center">Service to provide vulnerability templates through an HTTP App withresponses in JSON</p>
 </p>
 
 ---
@@ -16,8 +16,8 @@ Writing vulnerability reports is a time-consuming task. This microservice provid
 To run this microservice, you need to install the following dependencies:
 
 ```
-$ git clone https://github.com/ferwin-research/vuln-templates-microservice
-$ cd vuln-templates-microservice
+$ git clone https://github.com/instriq/templates-microservice
+$ cd templates-microservice
 $ cpanm --installdeps .
 $ perl app.pl daemon -m production -l http://\*:9090
 ```
@@ -25,8 +25,8 @@ $ perl app.pl daemon -m production -l http://\*:9090
 if you want to run it in docker, you can use the following commands:
 
 ```
-docker build -t vuln-templates .
-docker run -d -p 9090:80 vuln-templates
+docker build -t templates-microservice .
+docker run -d -p 9090:80 templates-microservice
 ```
 
 ---
@@ -40,5 +40,3 @@ docker run -d -p 9090:80 vuln-templates
 ### License
 
 - This work is licensed under [MIT License.](/LICENSE.md)
-
----
