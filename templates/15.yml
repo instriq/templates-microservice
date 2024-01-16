@@ -1,0 +1,18 @@
+vulnerability:
+  name:
+    pt-br: Nenhuma verificação de root no Android
+    en:
+    es:
+  type: android
+  category: Other
+  description:
+    pt-br: Não foi possível detectar na aplicação qualquer detecção de root ou ela encontra-se implementada de maneira incorreta. Rooting é o processo de obter acesso administrativo ou privilegiado no sistema operacional Android. Uma vez que há uma quebra nas restrições de segurança do sistema, é possível que o comportamento das aplicações seja alterado em tempo de execução e que o acesso ao sistema de arquivos seja feito de maneira ilimitada, consequentemente expondo as aplicações instaladas e suas informações armazenadas.
+    en:
+    es:
+  recommendation:
+    pt-br: "Detectar root em um dispositivo Android de forma efetiva não é uma tarefa simples. Um dos métodos mais utilizados é a checagem da existência de arquivos encontrados com frequência em dispositivos root, como: /system/app/Superuser.apk, /system/xbin/daemonsu, /system/bin/su, etc. Outros métodos de detecção consistem em executar o comando su através do método Runtime.getRuntime.exec() e verificar se uma exceção é disparada, localizar processos suspeitos em execução no sistema, a lista de pacotes de rooting instalados, builds customizados do Android, etc. As referências provêm detalhes sobre cada abordagem descrita. Recomenda-se a utilização de bibliotecas de terceiros, como Rootbeer [2] e a API SafetyNet [3] para execução dessa checagem, visto que as técnicas de rooting evoluem constantemente e bibliotecas como as citadas tendem a acompanhar tais evoluções."
+    en:
+    es:
+  references:
+    - https://github.com/OWASP/owasp-mastg/blob/master/Document/0x05j-Testing-Resiliency-Against-Reverse-Engineering.md
+    - https://owasp.org/www-project-mobile-top-10/2016-risks/m8-code-tampering

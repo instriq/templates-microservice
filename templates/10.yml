@@ -1,0 +1,17 @@
+vulnerability:
+  name:
+    pt-br: Ausência de mecanismo de Certificate Pinning
+    en:
+    es:
+  type: web
+  category: Other
+  description:
+    pt-br: O uso crescente de dispositivos móveis, principalmente em ambientes wireless, aumentou a viabilidade dos ataques conhecidos como man-in-the-middle, tornado mandatório o uso de SSL/TLS para as conexões feitas por dispositivos móveis.Ataques man-in-the-middle consistem em interceptar a conexão entre o usuário (vítima) e o servidor e com isso capturar e/ou alterar os dados, o uso de SSL/TLS (HTTPS) mitiga tal problema, pois para a realização da conexão é necessário a verificação do certificado através de um Certificate Autority.Porém mesmo com o uso de HTTPS é possível que a aplicação tenha suas requisições interceptadas por um atacante, bastando para isso que seja instalado um certificado do atacante no dispositivo móvel da vitima.Para mitigar este problema a solução consiste em fixar na aplicação a chave pública ou certificado do servidor assim como o host associado, esta técnica é conhecida como Certificate Pinning.
+    en:
+    es:
+  recommendation:
+    pt-br: Implementar a técnica de Certificate Pinning garante que a aplicação confie apenas no certificado do servidor.Certificate Pinning consiste em fixar na aplicação a chave pública ou certificado do servidor assim como o host associado, com isso, mesmo que existam outros certificados/CAs no dispositivo móvel, o utilizado para a aplicação realizar a conexão será o fixado.Certificate Pinning pode ser realizado adicionando um CAs na aplicação ou adicionando a chave pública diretamente no código, um exemplo pode ser encontrado no código da OWASP.
+    en:
+    es:
+  references:
+    - https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning

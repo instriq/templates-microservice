@@ -1,0 +1,18 @@
+vulnerability:
+  name:
+    pt-br:
+    en: WaF Bypass
+    es:
+  type: web
+  category: Other
+  description:
+    pt-br: O Web Application Firewall é uma solução que busca proteger a aplicação de diversas vulnerabilidades web conhecidas, intermediando as conexões cliente-servidor e filtrando cada entrada e saida de dados a fim de encontrar uma possível requisição maliciosa ou um vazamento de dados. Além de poder assumir funções de cache de conteúdo e CDN (Content Celivery network). Foi possível acessar a aplicação sem a intermediação do Web Application Firewall (WAF). Com esse tipo de ataque, é possível efetuar requisições maliciosas na aplicação sem o bloqueio da solução de WAF, assim, expondo as vulnerabilidades presentes no ambiente e acessando informações que antes não eram possíveis através dessa intermediação.
+    en:
+    es:
+  recommendation:
+    pt-br: Recomendamos que as portas de serviço sejam fechadas para a Internet e limitadas apenas para os endereços IP's fornecidos pela sua solução de WAF. A configuração pode ser feita por meio do webserver ou firewall.
+    en:
+    es:
+  references:
+    - https://www.cloudflare.com/ips/
+    - https://owasp.org/www-pdf-archive/OWASP_Stammtisch_Frankfurt_-_Web_Application_Firewall_Bypassing_-_how_to_defeat_the_blue_team_-_2015.10.29.pdf

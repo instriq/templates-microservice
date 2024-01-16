@@ -1,0 +1,17 @@
+vulnerability:
+  name:
+    pt-br: Enumeração de usuários
+    en: Username Enumeration
+    es:
+  type: web
+  category: Other
+  description:
+    pt-br: É possível enumerar usuários válidos no sistema por meio da realização de múltiplas requisições seguidas, possibilitando também que ataques de negação de serviço sejam realizados devido ao consumo excessivo de recursos.
+    en:
+    es:
+  recommendation:
+    pt-br: Deve-se inicialmente monitorar as sucessivas tentativas de acesso. Uma vez identificada as sucessivas tentativas de acesso deve-se buscar bloquear o ponto de origem dos ataque. Recomenda-se, neste caso, que o bloqueio seja temporário. Outra possível solução é aumentar o tempo de resposta tornando inviável uma automação deste tipo de ataque.
+    en:
+    es:
+  references:
+    - https://wiki.owasp.org/index.php/Testing_for_User_Enumeration_and_Guessable_User_Account_(OWASP-AT-002)

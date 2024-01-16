@@ -1,0 +1,37 @@
+vulnerability:
+  name:
+    pt-br:
+    en:
+    es:
+  type: web
+  category: Other
+  description:
+    pt-br:
+    en:
+    es:
+  recommendation:
+    pt-br:
+    en:
+    es:
+  references:
+    - https://owasp.org/www-community/controls/Blocking_Brute_Force_Attacks
+    - https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html#protect-against-automated-attacks
+
+    
+# Falta de controles contra ataques automatizados
+# Ausência de limitação de taxa de resposta
+
+# Descrição
+
+# Esse tipo de vulnerabilidade ocorre quando não são implementados controles de frequência de interações com o servidor, além de normalmente envolver uma diferença no comportamento do servidor ao receber dados válidos e inválidos. Por exemplo um endpoint de autenticação, diante do envio de credenciais válidas, retornará uma resposta diferente das antecedentes com as informações de sessão. Outro exemplo simples, ainda no caso de autenticação, é quando o servidor responde com "Usuário inválido" ao receber uma requisição de login cujo usuário não existe, e responde com "Login inválido" quando o usuário existe no cadastro mas a senha não bate, permitindo a enumeração de usuários.
+
+# Porém, qualquer caso no qual exista uma ausência de controles de frequência (como CAPTCHA, rate-limiting etc.) pode introduzir a possibilidade de ataques automatizados, incluindo ataques cujo objetivo é simplesmente causar a exaustão de recursos.
+
+# Solução
+
+# Para que esta falha não aconteça, deve ser implementado algum método de verificação nas frequências de requisições. A utilização destes métodos é efetiva pois garante que um atacante seja facilmente detectado ou seu script de automação seja bloqueado antes de efetivar o ataque.
+
+# Alguns métodos que podem ser usados contra ataques automatizados:
+
+# * CAPTCHA, é um programa que consegue distinguir entre uma máquina/robô e um usuário, para validar as requisições e não deixar que robôs automatizados abusem com requisições.
+# * Esgotamento de tempo e controle da frequência das requisições, verificando a origem da requisição ou ID do usuário para que o ele não consiga fazer a mesma ação em um pequeno intervalo de tempo.

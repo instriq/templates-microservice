@@ -1,0 +1,21 @@
+vulnerability:
+  name:
+    pt-br: Serviço operando em versão com vulnerabilidades conhecidas
+    en:
+    es:
+  type: web
+  category: Other
+  description:
+    pt-br: Durante o pentest foi possível identificar alguns serviços operando em versões que podem ser consideradas desatualizadas e com vulnerabilidades (CVEs) conhecidas. Isso demonstra que tal serviço tem chances significativas de ser explorado por agentes mal-intencionados.
+    en:
+    es:
+  recommendation:
+    pt-br: Recomendados que tal serviço seja atualizado para a versão mais recente que esteja disponível no momento. Se por alguma complicação isso não for possível, deve-se no mínimo aplicar o patch em questão.
+    en:
+    es:
+  references:
+    - https://owasp.org/www-project-vulnerability-management-guide/
+    - https://owaspsamm.org/model/operations/environment-management/stream-b/
+
+    
+

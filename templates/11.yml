@@ -1,0 +1,18 @@
+vulnerability:
+  name:
+    pt-br: Serviço com credencial padrão ou fraca
+    en:
+    es:
+  type: web
+  category: Other
+  description:
+    pt-br:
+    en:
+    es:
+  recommendation:
+    pt-br:
+    en:
+    es:
+  references:
+    - 
+

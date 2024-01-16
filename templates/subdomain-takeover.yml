@@ -1,0 +1,23 @@
+vulnerability:
+  name:
+    pt-br: Subdomain Takeover
+    en: 
+    es:
+  type: network
+  category: Misconfig
+  description:
+    pt-br: "Este tipo de vulnerabilidade acontece quando um subdomínio está configurado para redirecionar o tráfego para um serviço ou hospedagem compartilhada, para a realização dessa configuração comumente utiliza-se uma entrada DNS CNAME. Caso esse subdomínio caia em desuso, tornando-o obsoleto, o proprietário cessa sua inscrição no serviço de hospedagem sem alterar a configuração do servidor DNS. Com isso, o endereço fica disponível para reutilização e acessível através de um subdomínio da vítima. De forma exemplificada, este ataque acontece da seguinte maneira: você registra um serviço específico em uma certa plataforma que provê recursos compartilhados, como por exemplo shared-storage.mycloud.com. Depois disso, seu subdomínio \"testlab\" recebe uma nova entrada de DNS que aponta para um registro CNAME para: shared-storage.mycloud.com e o mesmo passa a funcionar perfeitamente. O tempo passa, e um ano depois, você não precisa mais desse serviço compartilhado de storage, chamado de testlab.company.com e cancela o registro, mas esquece de remover a entrada DNS de testlab.company.com que tem como endereço shared-storage.mycloud.com. Assim nasce o problema, pois agora, alguém pode acessar essa mesma empresa de serviço de storage e criar/configurar o shared-storage.mycloud.com e ter um apontamento válido no domínio em questão. Possuindo controle sobre o subdomínio sequestrado, o atacante ganha confiabilidade em ataques de phishing, payloads de Cross-Site Scripting, distribuição de malware, etc. Conseguimos obter controle total do subdomínio, onde podemos modificar o código fonte da aplicação para: explorar cenários de XSS, distribuir malwares, distribuir campanhas de phishing. Colocando em risco toda a camada da privacidade, integridade e confidencialidade dos usuários e colaboradores e usuários."
+    en:
+    es:
+  recommendation:
+    pt-br: Deve ser removido o registro DNS de entrada já que o mesmo não tem nenhuma utilização no momento.
+    en:
+    es:
+  references:
+    - https://developer.mozilla.org/en-US/docs/Web/Security/Subdomain_takeovers
+    - https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/10-Test_for_Subdomain_Takeover
+
+
+
+
+

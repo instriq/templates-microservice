@@ -1,0 +1,17 @@
+vulnerability:
+  name:
+    pt-br: Exposição de serviço sensível para Internet
+    en:
+    es:
+  type: network
+  category: Other
+  description:
+    pt-br:
+    en:
+    es:
+  recommendation:
+    pt-br:
+    en:
+    es:
+  references:
+    - https://owasp.org/Top10/A05_2021-Security_Misconfiguration/

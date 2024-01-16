@@ -1,0 +1,17 @@
+vulnerability:
+  name:
+    pt-br: Permissões inseguras no aplicativo
+    en:
+    es:
+  type: web
+  category: Other
+  description:
+    pt-br:
+    en:
+    es:
+  recommendation:
+    pt-br:
+    en:
+    es:
+  references:
+    - http://developer.android.com/guide/topics/security/permissions.html

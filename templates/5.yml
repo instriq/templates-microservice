@@ -1,0 +1,29 @@
+vulnerability:
+  name:
+    pt-br: Exposição de informações sensíveis através de interação com a aplicação
+    en:
+    es:
+  type: web
+  category: Other
+  description:
+    pt-br:
+    en:
+    es:
+  recommendation:
+    pt-br:
+    en:
+    es:
+  references:
+    - https://owasp.org/www-community/Improper_Error_Handling
+    - https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url
+    - https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure.html
+    
+
+# Descrição
+# A vulnerabilidade ocorre quando a partir de uma interação direta ou indireta com a aplicação existe a exposição de informações cujo teor é relevante para a organização, podendo ser utilizadas para causar prejuízo para o negócio.
+# Dados pessoais (PII), credenciais, informações de sessão e informações relativas ao funcionamento interno da aplicação são exemplos comuns de informações sensíveis. A exposição comumente ocorre devido à falhas de configuração e/ou falha na manipulação de erros por parte da aplicação. O impacto do vazamento varia de acordo com a criticidade da informação, podendo ocasionar desde o comprometimento total da aplicação até a multas por violação de legislação como GDPR e LGPD.
+
+# Solução
+
+# A exposição de informações pode ser corrigida/prevenida através do controle de acesso em servidores e aplicações, utilizar criptografia para armazenar ou transmitir informações sensíveis e manipulando erros na aplicação de maneira correta. 
+# O princípio do menor privilégio é uma das maneiras mais eficientes de se realizar o controle de acesso a informações pois garante que somente quem precisa da informação poderá acessá-la, diminuindo o nível de exposição. Além disso, é importante garantir que boas práticas de segurança sejam utilizadas, como não armazenar ou transmitir informações de configuração, credenciais e PII em plain text. Erros de aplicação devem ter seus detalhes registrados em log, nunca devendo ser expostos ao usuário.
