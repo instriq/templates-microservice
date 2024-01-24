@@ -1,0 +1,168 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2024-01-24T12:06:57.854Z",
+    "__export_source": "insomnia.desktop.app:v2021.5.0",
+    "resources": [
+        {
+            "_id": "wrk_scratchpad",
+            "parentId": "proj_scratchpad",
+            "modified": 1706096883779,
+            "created": 1706096883779,
+            "name": "Scratch Pad",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_c79bb3fb26da436e9dced33217eac059",
+            "parentId": "fld_31bc1b8d93654318bb14ba5524728983",
+            "modified": 1706097009693,
+            "created": 1706096981501,
+            "url": "http://127.0.0.1:9090/",
+            "name": "Read templates",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.6.0"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1706097009612,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_918ae0b18dc2470099285276640acc8b",
+            "parentId": "fld_31bc1b8d93654318bb14ba5524728983",
+            "modified": 1706097026253,
+            "created": 1706097017854,
+            "url": "http://127.0.0.1:9090/?id=4",
+            "name": "Filter by ID",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.6.0"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1706097009562,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_6a343078cdff44a99fdcff76cbaa1b05",
+            "parentId": "fld_31bc1b8d93654318bb14ba5524728983",
+            "modified": 1706097041328,
+            "created": 1706097034272,
+            "url": "http://127.0.0.1:9090/?lang=pt-br",
+            "name": "Filter by language",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.6.0"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1706097009512,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_72b755b68b2445a1a92fda53c72eb924",
+            "parentId": "fld_31bc1b8d93654318bb14ba5524728983",
+            "modified": 1706097514791,
+            "created": 1706097489481,
+            "url": "http://127.0.0.1:9090/?id=2&lang=es",
+            "name": "Combine all filters",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.6.0"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1706097009412,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_31bc1b8d93654318bb14ba5524728983",
+            "parentId": "wrk_scratchpad",
+            "modified": 1706096972296,
+            "created": 1706096972296,
+            "name": "Vulnerability Templates",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1706096972296,
+            "_type": "request_group"
+        },
+        {
+            "_id": "env_99d30891da4bdcebc63947a8fc17f076de878684",
+            "parentId": "wrk_scratchpad",
+            "modified": 1706096897277,
+            "created": 1706096897277,
+            "name": "Base Environment",
+            "data": {},
+            "dataPropertyOrder": null,
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1706096897277,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_99d30891da4bdcebc63947a8fc17f076de878684",
+            "parentId": "wrk_scratchpad",
+            "modified": 1706096897291,
+            "created": 1706096897291,
+            "name": "Default Jar",
+            "cookies": [],
+            "_type": "cookie_jar"
+        }
+    ]
+}
