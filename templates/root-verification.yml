@@ -1,8 +1,8 @@
 vulnerability:
   name:
     pt-br: Nenhuma verificação de root no Android
-    en:
-    es:
+    en: App without root privilegies verification
+    es: No hay verificación de root en Android
   type: android
   category: Other
   description:

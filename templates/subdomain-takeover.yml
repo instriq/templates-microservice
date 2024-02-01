@@ -1,8 +1,8 @@
 vulnerability:
   name:
     pt-br: Subdomain Takeover
-    en: 
-    es:
+    en: Subdomain Takeover
+    es: Subdomain Takeover
   type: network
   category: Misconfig
   description:

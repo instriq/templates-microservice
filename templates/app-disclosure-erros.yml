@@ -1,8 +1,8 @@
 vulnerability:
   name:
     pt-br: Divulgação de Erros da Aplicação
-    en:
-    es:
+    en: Disclosure of Application Errors
+    es: Divulgación de errores de aplicación
   type: web
   category: Misconfiguration
   description:

@@ -1,8 +1,8 @@
 vulnerability:
   name:
-    pt-br:
+    pt-br: WaF Bypass
     en: WaF Bypass
-    es:
+    es: WaF Bypass
   type: web
   category: Other
   description:

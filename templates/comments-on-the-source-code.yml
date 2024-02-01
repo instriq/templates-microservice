@@ -1,8 +1,8 @@
 vulnerability:
   name:
-    pt-br: Comentários em códigos no front-end
-    en:
-    es:
+    pt-br: Comentários com conteúdo sensível em códigos no front-end
+    en: Comments with sensitive content in front-end codes
+    es: Comentarios con contenido sensible en códigos de front-end
   type: web
   category: Other
   description:
