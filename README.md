@@ -1,6 +1,18 @@
 <p align="center">
   <h3 align="center"><b>Vulnerabilities Templates Micro-service</b></h3>
   <p align="center">Service to provide vulnerability templates through an HTTP App withresponses in JSON</p>
+   <p align="center">
+    <a href="/LICENSE.md">
+      <img src="https://img.shields.io/badge/license-MIT-blue.svg">
+    </a>
+     <a href="https://github.com/instriq/templates-microservice/releases">
+      <img src="https://img.shields.io/badge/version-0.0.1-blue.svg">
+    </a>
+    <br/>
+    <img src="https://github.com/instriq/templates-microservice/actions/workflows/linter.yml/badge.svg">
+    <img src="https://github.com/instriq/templates-microservice/actions/workflows/zarn.yml/badge.svg">
+    <img src="https://github.com/instriq/templates-microservice/actions/workflows/security-gate.yml/badge.svg">
+  </p>
 </p>
 
 ---
