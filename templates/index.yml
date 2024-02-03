@@ -3,12 +3,12 @@ index:
   - 2: comments-on-the-source-code
   - 3: subdomain-takeover
   - 4: waf-bypass
-  - 5: "5"
-  - 6: "6"
-  - 7: "7"
-  - 8: "8"
-  - 9: "9"
-  - 10: "10"
+  - 5: exposure-sensitive-info
+  - 6: insecure-http-communication
+  - 7: user-enumeration
+  - 8: no-rate-limit
+  - 9: debugging-mode-enabled
+  - 10: lack-certificate-pinning
   - 11: use-of-default-credential
   - 12: service-with-known-vulns
   - 13: exposure-of-sensitive-service

@@ -1,8 +1,8 @@
 vulnerability:
   name:
-    pt-br:
-    en:
-    es:
+    pt-br: Comunicação HTTP insegura
+    en: Insecure HTTP communication
+    es: Comunicación HTTP insegura
   type: web
   category: Other
   description:
@@ -16,17 +16,13 @@ vulnerability:
   references:
     - https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html
     
-# Comunicação HTTP insegura
-
 # Descrição
 # A aplicação Web não utiliza mecanismos de comunicação segura (HTTPS). Isso permite que usuários maliciosos no mesmo ambiente de rede realizem ataques, interceptando os dados trafegados entre cliente e servidor, podendo levar ao vazamento de informações sensíveis.
 # Como a vulnerabilidade permite acesso a esses dados, a falta de HTTPS pode levar ao vazamento de informações sensíveis.
 
 # Solução
-
 # Para correção da vulnerabilidade, recomendamos a implementação do protocolo HTTPS, o qual opera sob os protocolos criptográficos SSL e TLS.
 # Melhores práticas estabelecem a utilização do protocolo TLS em sua versão 1.2 ou superior, evitando qualquer versão do protocolo SSL devido à falhas conhecidas.
-
 # A aplicação também deve possuir um certificado digital assinado por uma autoridade certificadora, garantindo assim a confiabilidade e autenticidade do ambiente e da organização.
 # Adicionalmente, as configurações do servidor devem automaticamente redirecionar qualquer requisição HTTP insegura para o uso do HTTPS, conforme o exemplo abaixo:
 

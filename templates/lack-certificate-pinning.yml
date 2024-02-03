@@ -1,8 +1,8 @@
 vulnerability:
   name:
     pt-br: Ausência de mecanismo de Certificate Pinning
-    en:
-    es:
+    en: Lack of Certificate Pinning mechanism
+    es: Falta de mecanismo de fijación de certificados
   type: web
   category: Other
   description:

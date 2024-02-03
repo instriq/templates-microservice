@@ -2,7 +2,7 @@ vulnerability:
   name:
     pt-br: Enumeração de usuários
     en: Username Enumeration
-    es:
+    es: Enumeración de usuarios
   type: web
   category: Other
   description:

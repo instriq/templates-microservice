@@ -1,8 +1,8 @@
 vulnerability:
   name:
     pt-br: A aplicação permite ser depurada
-    en:
-    es:
+    en: Debugging mode enabled
+    es: Modo de depuración habilitado
   type: web
   category: Other
   description:
