@@ -1,8 +1,8 @@
 vulnerability:
   name:
     pt-br: Permissões inseguras no aplicativo
-    en:
-    es:
+    en: Insecure App permissions
+    es: Permisos inseguros no aplicativos
   type: web
   category: Other
   description:

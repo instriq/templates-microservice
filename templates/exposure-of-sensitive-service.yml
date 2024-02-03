@@ -1,8 +1,8 @@
 vulnerability:
   name:
     pt-br: Exposição de serviço sensível para Internet
-    en:
-    es:
+    en: Sensitive Internet Service Exposure
+    es: Exposición sensible del servicio en Internet
   type: network
   category: Other
   description:

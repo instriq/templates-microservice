@@ -1,8 +1,8 @@
 vulnerability:
   name:
     pt-br: Serviço operando em versão com vulnerabilidades conhecidas
-    en:
-    es:
+    en: Service version with known vulnerabilities 
+    es: Versión del servicio con vulnerabilidades conocidas
   type: web
   category: Other
   description:
@@ -16,6 +16,3 @@ vulnerability:
   references:
     - https://owasp.org/www-project-vulnerability-management-guide/
     - https://owaspsamm.org/model/operations/environment-management/stream-b/
-
-    
-
