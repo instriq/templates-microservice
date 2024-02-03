@@ -47,7 +47,10 @@ get "/" => sub {
             if ($vuln -> {"id"} == $id) {
                 $result = $vuln;
                 
-                return $self -> render(json => { "templates" => $result });
+                return $self -> render (
+                    status => 200,
+                    json => { "templates" => $result }
+                );
             }
         }
 
@@ -57,7 +60,10 @@ get "/" => sub {
         );
     }
     
-    return $self -> render (json => { "templates" => $result });
+    return $self -> render (
+        status => 200,
+        json => { "templates" => $result }
+    );
 };
 
 app -> start();
