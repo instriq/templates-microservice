@@ -8,6 +8,8 @@ use YAML::XS;
 use Mojolicious::Lite;
 use Mojo::JSON qw(decode_json);
 
+our $VERSION = '0.0.1';
+
 plugin "I18N" => { namespace => "VulnTemplates" };
 
 get "/" => sub {
