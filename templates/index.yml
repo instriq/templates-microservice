@@ -14,3 +14,20 @@ index:
   - 13: exposure-of-sensitive-service
   - 14: insecure-app-permissions
   - 15: root-verification
+  - 16: s3-without-criptography
+  - 17: security-group-without-use
+  # - 18:
+  # - 19:
+  # - 20:
+  # - 21:
+  # - 22:
+  # - 23:
+  # - 24:
+  # - 25:
+  # - 26:
+  # - 27:
+  # - 28:
+  # - 29:
+  # - 30:
+  # - 31:
+  # - 32:

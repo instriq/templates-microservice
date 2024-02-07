@@ -1,9 +1,9 @@
 vulnerability:
   name:
-    pt-br:
+    pt-br: S3 Bucket sem criptografia ativada
     en:
     es:
-  type: web
+  type: cloud
   category: Other
   description:
     pt-br:
@@ -14,4 +14,4 @@ vulnerability:
     en:
     es:
   references:
-    - 
+    - https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html

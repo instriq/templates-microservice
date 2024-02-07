@@ -1,0 +1,17 @@
+vulnerability:
+  name:
+    pt-br: Security Group sem nenhuma utilização
+    en: Security Group without any use
+    es: Grupo de seguridad sin ningún uso
+  type: cloud
+  category: Other
+  description:
+    pt-br: Analisando cada um dos Security Groups presente na conta, foram identificados que alguns deles não estão sendo utilizado em nenhum lugar e por isso podemos considerar a exclusão dos mesmos. Isso não representa uma vulnerabilidade de fato, mas é interessante para diminuir a superfície de ataque e para se previnir de erros humanos. Também contribuí com uma melhor visibilidade para os demais security groups.
+    en:
+    es:
+  recommendation:
+    pt-br: A sugestão aqui é descontinuar esse Security Group fazendo a exclusão do mesmo.
+    en:
+    es:
+  references:
+    - https://docs.aws.amazon.com/vpc/latest/userguide/security-groups.html
