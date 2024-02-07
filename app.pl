@@ -8,7 +8,7 @@ use YAML::XS;
 use Mojolicious::Lite;
 use Mojo::JSON qw(decode_json);
 
-our $VERSION = '0.0.1';
+our $VERSION = "0.0.1";
 
 plugin "I18N" => { namespace => "VulnTemplates" };
 
@@ -56,9 +56,9 @@ get "/" => sub {
             }
         }
 
-        return $self -> render(
+        return $self -> render (
             status => 404,
-            json => { "Error" => "Template not found" }
+            json => { "error" => "Template not found" }
         );
     }
     
@@ -67,5 +67,26 @@ get "/" => sub {
         json => { "templates" => $result }
     );
 };
+
+app -> hook(
+    after_render => sub {
+        my ($self, $output, $format) = @_;
+        $self ->res ->headers -> header("Content-Security-Policy" => "default-src \"self\"");
+        $self ->res ->headers -> header("X-Content-Type-Options" => "nosniff");
+        $self ->res ->headers -> header("X-Frame-Options" => "DENY");
+        $self ->res ->headers -> header("Strict-Transport-Security" => "max-age=31536000; includeSubDomains");
+        $self ->res ->headers -> content_type("application/json");
+    }
+);
+
+app -> hook(
+    before_dispatch => sub {
+        my $cors = shift;
+        $cors -> res -> headers -> header("Access-Control-Allow-Origin" => "*");
+        $cors -> res -> headers -> header("Access-Control-Allow-Methods" => "GET, OPTIONS");
+        $cors -> res -> headers -> header("Access-Control-Allow-Headers" => "Origin, Content-Type, Accept");
+        $cors -> res -> headers -> header("Access-Control-Max-Age" => "86400");
+    }
+);
 
 app -> start();
