@@ -6,12 +6,12 @@ vulnerability:
   type: cloud
   category: Other
   description:
-    pt-br:
-    en:
-    es:
+    pt-br: Uma função Lambda (ou Lambda function) é um serviço de computação sem servidor que permite a execução de código em resposta a eventos sem a necessidade de gerenciar servidores. Ela é uma parte central da computação serverless, que visa simplificar o processo de desenvolvimento e execução de aplicativos, permitindo que os desenvolvedores se concentrem apenas no código e na lógica de negócios, sem se preocupar com a infraestrutura subjacente. Credenciais, chaves de API ou tokens de acesso, não devem ser codificadas diretamente no código-fonte, pois isso pode tornar essas informações vulneráveis a ataques se o código for comprometido. É mais seguro armazenar essas informações em locais seguros, como variáveis de ambiente ou serviços de gerenciamento de segredos, como o AWS Secrets Manager ou o AWS Parameter Store.
+    en: A Lambda function is a serverless computing service that allows you to run code in response to events without the need to manage servers. It is a central part of serverless computing, which aims to simplify the process of developing and running applications, allowing developers to focus only on the code and business logic, without worrying about the underlying infrastructure. Credentials, API keys, or access tokens should not be hardcoded directly in the source code, as this can make this information vulnerable to attacks if the code is compromised. It is safer to store this information in secure locations, such as environment variables or secret management services, such as AWS Secrets Manager or AWS Parameter Store.
+    es: Una función Lambda es un servicio de computación sin servidor que le permite ejecutar código en respuesta a eventos sin la necesidad de administrar servidores. Es una parte central de la computación sin servidor, que tiene como objetivo simplificar el proceso de desarrollo y ejecución de aplicaciones, permitiendo a los desarrolladores centrarse solo en el código y la lógica empresarial, sin preocuparse por la infraestructura subyacente. Las credenciales, claves de API o tokens de acceso no deben codificarse directamente en el código fuente, ya que esto puede hacer que esta información sea vulnerable a ataques si el código se ve comprometido. Es más seguro almacenar esta información en ubicaciones seguras, como variables de entorno o servicios de administración de secretos, como AWS Secrets Manager o AWS Parameter Store.
   recommendation:
-    pt-br:
-    en:
-    es:
+    pt-br: Para informações altamente sensíveis, como senhas e segredos, considere o uso de serviços de gerenciamento de segredos, como o AWS Secrets Manager ou o AWS Parameter Store. Eles podem armazenar e recuperar essas informações de forma segura, com controle de acesso e rotação automática de segredos.
+    en: For highly sensitive information, such as passwords and secrets, consider using secret management services, such as AWS Secrets Manager or AWS Parameter Store. They can securely store and retrieve this information, with access control and automatic secret rotation.
+    es: Para información altamente sensible, como contraseñas y secretos, considere el uso de servicios de administración de secretos, como AWS Secrets Manager o AWS Parameter Store. Pueden almacenar y recuperar esta información de forma segura, con control de acceso y rotación automática de secretos.
   references:
     - https://docs.aws.amazon.com/codeguru/detector-library/python/hardcoded-credentials/

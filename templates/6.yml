@@ -6,12 +6,16 @@ vulnerability:
   type: cloud
   category: Other
   description:
-    pt-br:
-    en:
-    es:
+    pt-br: O S3 (Simple Storage Service) é um serviço de armazenamento de objetos, ele permite que você armazene, recupere e gerencie objetos, como arquivos e dados, em uma infraestrutura de armazenamento altamente disponível e durável. Os objetos no S3 são armazenados em "buckets" (compartimentos), que são contêineres para os seus dados. O versionamento no Amazon S3 (Simple Storage Service) é uma funcionalidade que permite manter várias versões de um objeto (arquivo) em um bucket S3. Quando o versionamento é habilitado para um bucket, o S3 não substituirá objetos existentes quando uma nova versão for carregada com o mesmo nome. Em vez disso, o S3 armazenará cada versão do objeto e permitirá que você acesse, recupere e restaure versões anteriores, se necessário.  O versionamento ajuda a proteger seus dados contra ataques maliciosos que visam modificar ou excluir objetos, já que as versões anteriores podem ser restauradas. Identificamos que esse recurso está desativado em vários buckets. Sem o versionamento, caso um objeto seja excluído ou substituído por engano, não haverá uma cópia de backup dessa versão anterior. Isso pode levar à perda irreversível de dados importantes.
+    en: Amazon S3 (Simple Storage Service) is an object storage service that allows you to store, retrieve, and manage objects, such as files and data, in a highly available and durable storage infrastructure. Objects in S3 are stored in buckets, which are containers for your data. Versioning in Amazon S3 (Simple Storage Service) is a feature that allows you to keep multiple versions of an object (file) in an S3 bucket. When versioning is enabled for a bucket, S3 will not overwrite existing objects when a new version is uploaded with the same name. Instead, S3 will store each version of the object and allow you to access, retrieve, and restore previous versions, if necessary. Versioning helps protect your data against malicious attacks that aim to modify or delete objects, as previous versions can be restored. We identified that this feature is disabled in several buckets. Without versioning, if an object is accidentally deleted or replaced, there will be no backup copy of that previous version. This can lead to irreversible loss of important data.
+    es: 
   recommendation:
-    pt-br:
-    en:
+    pt-br: |
+      Para ativar o versionamento em um bucket S3 usando a AWS CLI, você pode usar o comando aws s3api put-bucket-versioning. Aqui está o comando geral para ativar o versionamento:
+      aws s3api put-bucket-versioning --bucket NOME_DO_BUCKET --versioning-configuration Status=Enabled
+    en: |
+      To enable versioning on an S3 bucket using the AWS CLI, you can use the aws s3api put-bucket-versioning command. Here is the general command to enable versioning:
+      aws s3api put-bucket-versioning --bucket BUCKET_NAME --versioning-configuration Status=Enabled
     es:
   references:
     - https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html

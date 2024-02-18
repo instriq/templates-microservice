@@ -6,12 +6,87 @@ vulnerability:
   type: cloud
   category: Other
   description:
-    pt-br:
-    en:
-    es:
+    pt-br: O Amazon Elastic Block Store (EBS) oferece volumes de armazenamento de bloco para uso com instâncias do Amazon EC2. Os volumes EBS são altamente disponíveis e confiáveis. Eles são armazenados de forma redundante em vários dispositivos em vários racks de um único data center e são projetados para serem duráveis, independentemente do tipo de instância do EC2 em que são montados. No entanto, os volumes EBS não são criptografados por padrão. Isso significa que, se um invasor obtiver acesso ao volume EBS, ele poderá acessar os dados armazenados nele. Para proteger os dados armazenados em volumes EBS, é recomendável criptografar os volumes EBS.
+    en: Amazon Elastic Block Store (EBS) provides block storage volumes for use with Amazon EC2 instances. EBS volumes are highly available and reliable. They are stored redundantly across multiple devices in multiple racks in a single data center and are designed to be durable, regardless of the EC2 instance type to which they are attached. However, EBS volumes are not encrypted by default. This means that if an attacker gains access to the EBS volume, they can access the data stored on it. To protect the data stored on EBS volumes, it is recommended to encrypt the EBS volumes.
+    es: Amazon Elastic Block Store (EBS) proporciona volúmenes de almacenamiento de bloques para su uso con instancias de Amazon EC2. Los volúmenes EBS son altamente disponibles y confiables. Se almacenan de forma redundante en varios dispositivos en varios racks en un único centro de datos y están diseñados para ser duraderos, independientemente del tipo de instancia de EC2 a la que estén adjuntos. Sin embargo, los volúmenes EBS no están encriptados de forma predeterminada. Esto significa que si un atacante obtiene acceso al volumen EBS, puede acceder a los datos almacenados en él. Para proteger los datos almacenados en los volúmenes EBS, se recomienda encriptar los volúmenes EBS.
   recommendation:
-    pt-br:
-    en:
-    es:
+    pt-br: |
+      Para criptografar um volume EBS existente, siga as etapas abaixo:
+      1. Abra o console do Amazon EC2 em https://console.aws.amazon.com/ec2/.
+      2. No painel de navegação, escolha Volumes.
+      3. Selecione o volume EBS que deseja criptografar.
+      4. Escolha Actions, Modify Volume.
+      5. No campo Encryption, selecione o tipo de chave que deseja usar para criptografar o volume.
+      6. Escolha Modify.
+      7. Selecione o volume EBS e escolha Actions, Create Snapshot.
+      8. No campo Encryption, selecione o tipo de chave que deseja usar para criptografar o snapshot.
+      9. Escolha Create Snapshot.
+      10. No painel de navegação, escolha Snapshots.
+      11. Selecione o snapshot que você acabou de criar.
+      12. Escolha Actions, Copy.
+      13. No campo Encryption, selecione o tipo de chave que deseja usar para criptografar o snapshot.
+      14. Escolha Copy.
+      15. No painel de navegação, escolha Snapshots.
+      16. Selecione o snapshot que você acabou de criar.
+      17. Escolha Actions, Create Volume.
+      18. No campo Encryption, selecione o tipo de chave que deseja usar para criptografar o volume.
+      19. Escolha Create Volume.
+      20. No painel de navegação, escolha Volumes.
+      21. Selecione o volume EBS que você acabou de criar.
+      22. Escolha Actions, Attach Volume.
+      23. Selecione a instância EC2 à qual deseja anexar o volume.
+      24. Escolha Attach.
+    en: |
+      To encrypt an existing EBS volume, follow the steps below:
+      1. Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+      2. In the navigation pane, choose Volumes.
+      3. Select the EBS volume that you want to encrypt.
+      4. Choose Actions, Modify Volume.
+      5. In the Encryption field, select the type of key that you want to use to encrypt the volume.
+      6. Choose Modify.
+      7. Select the EBS volume and choose Actions, Create Snapshot.
+      8. In the Encryption field, select the type of key that you want to use to encrypt the snapshot.
+      9. Choose Create Snapshot.
+      10. In the navigation pane, choose Snapshots.
+      11. Select the snapshot that you just created.
+      12. Choose Actions, Copy.
+      13. In the Encryption field, select the type of key that you want to use to encrypt the snapshot.
+      14. Choose Copy.
+      15. In the navigation pane, choose Snapshots.
+      16. Select the snapshot that you just created.
+      17. Choose Actions, Create Volume.
+      18. In the Encryption field, select the type of key that you want to use to encrypt the volume.
+      19. Choose Create Volume.
+      20. In the navigation pane, choose Volumes.
+      21. Select the EBS volume that you just created.
+      22. Choose Actions, Attach Volume.
+      23. Select the EC2 instance to which you want to attach the volume.
+      24. Choose Attach.
+    es: |
+      Para encriptar un volumen EBS existente, siga los pasos a continuación:
+      1. Abra la consola de Amazon EC2 en https://console.aws.amazon.com/ec2/.
+      2. En el panel de navegación, elija Volumes.
+      3. Seleccione el volumen EBS que desea encriptar.
+      4. Elija Actions, Modify Volume.
+      5. En el campo Encryption, seleccione el tipo de clave que desea usar para encriptar el volumen.
+      6. Elija Modify.
+      7. Seleccione el volumen EBS y elija Actions, Create Snapshot.
+      8. En el campo Encryption, seleccione el tipo de clave que desea usar para encriptar el snapshot.
+      9. Elija Create Snapshot.
+      10. En el panel de navegación, elija Snapshots.
+      11. Seleccione el snapshot que acaba de crear.
+      12. Elija Actions, Copy.
+      13. En el campo Encryption, seleccione el tipo de clave que desea usar para encriptar el snapshot.
+      14. Elija Copy.
+      15. En el panel de navegación, elija Snapshots.
+      16. Seleccione el snapshot que acaba de crear.
+      17. Elija Actions, Create Volume.
+      18. En el campo Encryption, seleccione el tipo de clave que desea usar para encriptar el volumen.
+      19. Elija Create Volume.
+      20. En el panel de navegación, elija Volumes.
+      21. Seleccione el volumen EBS que acaba de crear.
+      22. Elija Actions, Attach Volume.
+      23. Seleccione la instancia EC2 a la que desea adjuntar el volumen.
+      24. Elija Attach.
   references:
     - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html

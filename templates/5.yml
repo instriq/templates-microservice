@@ -6,12 +6,12 @@ vulnerability:
   type: cloud
   category: Other
   description:
-    pt-br:
-    en:
-    es:
+    pt-br: O EBS (Elastic Block Store) é um serviço de armazenamento de blocos (com alta disponibilidade e escalável), ele fornece volumes de armazenamento persistente que podem ser anexados a instâncias EC2 (Elastic Compute Cloud), permitindo que você armazene dados, como sistemas de arquivos, bancos de dados e outros tipos de informações, de forma confiável e durável. Um recurso importante do Amazon EBS é a capacidade de criar snapshots. Os snapshots são cópias point-in-time dos dados em seu volume EBS. Eles são úteis para backup, recuperação de desastres e migração de dados. Os snapshots são armazenados no Amazon S3 (Simple Storage Service) e são incrementalmente copiados, o que ajuda a economizar espaço e custos. A criptografia ajuda a proteger os dados armazenados em snapshots contra acessos não autorizados. Mesmo que os snapshots sejam armazenados no Amazon S3, aplicar criptografia aos dados garante que eles estejam protegidos contra qualquer pessoa que tente acessá-los sem a chave de criptografia correta.
+    en: Amazon EBS (Elastic Block Store) is a high-availability and scalable block storage service that provides persistent storage volumes that can be attached to EC2 (Elastic Compute Cloud) instances, allowing you to store data, such as file systems, databases, and other types of information, reliably and durably. An important feature of Amazon EBS is the ability to create snapshots. Snapshots are point-in-time copies of the data on your EBS volume. They are useful for backup, disaster recovery, and data migration. Snapshots are stored in Amazon S3 (Simple Storage Service) and are incrementally copied, which helps save space and costs. Encryption helps protect the data stored in snapshots against unauthorized access. Even though snapshots are stored in Amazon S3, applying encryption to the data ensures that they are protected against anyone trying to access them without the correct encryption key.
+    es: 
   recommendation:
-    pt-br:
-    en:
-    es:
+    pt-br: Para criar snapshots criptografados do Amazon EBS, você pode configurar a criptografia durante o processo de criação do snapshot ou aplicar criptografia em snapshots existentes usando a AWS Console ou via AWS CLI.
+    en: To create encrypted snapshots of Amazon EBS, you can configure encryption during the snapshot creation process or apply encryption to existing snapshots using the AWS Console or via AWS CLI.
+    es: 
   references:
     - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html

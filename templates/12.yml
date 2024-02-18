@@ -6,9 +6,9 @@ vulnerability:
   type: cloud
   category: Other
   description:
-    pt-br:
-    en:
-    es:
+    pt-br: Checando a política de senhas aplicada a conta em questão, é perceptível que a mesma já encontra em um nível de maturidade super interessante pois tem todos os recursos disponíveis habilitados como prevenção de reuso de senha, tempo de expiração e demais. No entanto o comprimento/tamanho mínimo exigido para as senhas é curto, de apenas 8 caracteres. Quanto menor for uma senha, menor será a complexidade da mesma, diminuindo assim o esforço para N tipos de ataques. Esse fato faz com a possibilidade da execução de alguns ataques fiquem viáveis, aumentando o risco para a conta.
+    en: Checking the password policy applied to the account in question, it is noticeable that it is already at a very interesting maturity level because it has all the available resources enabled such as prevention of password reuse, expiration time and others. However, the minimum length required for passwords is short, only 8 characters. The shorter a password, the less complex it will be, thus reducing the effort for N types of attacks. This fact makes the possibility of executing some attacks viable, increasing the risk for the account.
+    es: Al verificar la política de contraseñas aplicada a la cuenta en cuestión, es evidente que ya se encuentra en un nivel de madurez muy interesante porque tiene todos los recursos disponibles habilitados, como la prevención de la reutilización de contraseñas, el tiempo de expiración y otros. Sin embargo, la longitud mínima requerida para las contraseñas es corta, solo 8 caracteres. Cuanto más corta sea una contraseña, menos compleja será, reduciendo así el esfuerzo para N tipos de ataques. Este hecho hace que la posibilidad de ejecutar algunos ataques sea viable, aumentando el riesgo para la cuenta.
   recommendation:
     pt-br: Como estamos inseridos em um contexto extremamente crítico, a recomendação é que a conta exigi pelo menos 12 caracteres.
     en: As we are in an extremely critical context, the recommendation is that the account requires at least 12 characters.

@@ -6,12 +6,12 @@ vulnerability:
   type: web
   category: Other
   description:
-    pt-br:
-    en:
-    es:
+    pt-br:  O aplicativo solicita permissões que não são necessárias para o seu funcionamento, o que pode resultar em vazamento de informações sensíveis dos usuários. Além disso, o aplicativo pode solicitar permissões que não são necessárias para o seu funcionamento, o que pode resultar em vazamento de informações sensíveis dos usuários.
+    en: The application requests permissions that are not necessary for its operation, which can result in leakage of sensitive user information. In addition, the application may request permissions that are not necessary for its operation, which can result in leakage of sensitive user information.
+    es: La aplicación solicita permisos que no son necesarios para su funcionamiento, lo que puede resultar en la filtración de información sensible del usuario. Además, la aplicación puede solicitar permisos que no son necesarios para su funcionamiento, lo que puede resultar en la filtración de información sensible del usuario.
   recommendation:
-    pt-br:
-    en:
-    es:
+    pt-br: Para corrigir a vulnerabilidade, recomendamos que o aplicativo solicite apenas as permissões necessárias para o seu funcionamento. Além disso, é importante que o aplicativo solicite permissões apenas quando necessário, e que o usuário seja informado sobre o motivo da solicitação de permissão.
+    en: To fix the vulnerability, we recommend that the application requests only the permissions necessary for its operation. Additionally, it is important that the application requests permissions only when necessary, and that the user is informed about the reason for the permission request.
+    es: Para corregir la vulnerabilidad, recomendamos que la aplicación solicite solo los permisos necesarios para su funcionamiento. Además, es importante que la aplicación solicite permisos solo cuando sea necesario, y que el usuario sea informado sobre el motivo de la solicitud de permiso.
   references:
     - http://developer.android.com/guide/topics/security/permissions.html

@@ -10,23 +10,32 @@ vulnerability:
     en: The Web application does not use secure communication mechanisms (HTTPS). This allows malicious users in the same network environment to perform attacks, intercepting data transmitted between the client and server, which can lead to the leakage of sensitive information.
     es: La aplicación web no utiliza mecanismos de comunicación segura (HTTPS). Esto permite que los usuarios maliciosos en el mismo entorno de red realicen ataques, interceptando los datos transmitidos entre el cliente y el servidor, lo que puede provocar la fuga de información sensible.
   recommendation:
-    pt-br: 
-    en:
-    es:
+    pt-br: |
+      Para correção da vulnerabilidade, recomendamos a implementação do protocolo HTTPS, o qual opera sob os protocolos criptográficos SSL e TLS.
+      Melhores práticas estabelecem a utilização do protocolo TLS em sua versão 1.2 ou superior, evitando qualquer versão do protocolo SSL devido à falhas conhecidas.
+      A aplicação também deve possuir um certificado digital assinado por uma autoridade certificadora, garantindo assim a confiabilidade e autenticidade do ambiente e da organização.
+      Adicionalmente, as configurações do servidor devem automaticamente redirecionar qualquer requisição HTTP insegura para o uso do HTTPS, conforme o exemplo abaixo:
+      Exemplo de configuração .htaccess:
+      RewriteEngine On 
+      RewriteCond %{SERVER_PORT} 80 
+      RewriteRule ^(.*)$ https://site.com/$1 [R,L]
+    en: |
+      To fix the vulnerability, we recommend implementing the HTTPS protocol, which operates under the cryptographic protocols SSL and TLS.
+      Best practices establish the use of the TLS protocol in version 1.2 or higher, avoiding any version of the SSL protocol due to known vulnerabilities.
+      The application must also have a digital certificate signed by a certification authority, thus ensuring the reliability and authenticity of the environment and the organization.
+      Additionally, server settings should automatically redirect any insecure HTTP request to use HTTPS, as shown in the example below:
+      Example of .htaccess configuration:
+      RewriteEngine On 
+      RewriteCond %{SERVER_PORT} 80 
+      RewriteRule ^(.*)$ https://site.com/$1 [R,L]
+    es: |
+      Para corregir la vulnerabilidad, recomendamos implementar el protocolo HTTPS, que opera bajo los protocolos criptográficos SSL y TLS.
+      Las mejores prácticas establecen el uso del protocolo TLS en su versión 1.2 o superior, evitando cualquier versión del protocolo SSL debido a vulnerabilidades conocidas.
+      La aplicación también debe tener un certificado digital firmado por una autoridad de certificación, garantizando así la confiabilidad y autenticidad del entorno y la organización.
+      Además, la configuración del servidor debe redirigir automáticamente cualquier solicitud HTTP insegura para usar HTTPS, como se muestra en el ejemplo a continuación:
+      Ejemplo de configuración .htaccess:
+      RewriteEngine On 
+      RewriteCond %{SERVER_PORT} 80 
+      RewriteRule ^(.*)$ https://site.com/$1 [R,L]
   references:
     - https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html
-    
-# Descrição
-# A aplicação Web não utiliza mecanismos de comunicação segura (HTTPS). Isso permite que usuários maliciosos no mesmo ambiente de rede realizem ataques, interceptando os dados trafegados entre cliente e servidor, podendo levar ao vazamento de informações sensíveis.
-# Como a vulnerabilidade permite acesso a esses dados, a falta de HTTPS pode levar ao vazamento de informações sensíveis.
-
-# Solução
-# Para correção da vulnerabilidade, recomendamos a implementação do protocolo HTTPS, o qual opera sob os protocolos criptográficos SSL e TLS.
-# Melhores práticas estabelecem a utilização do protocolo TLS em sua versão 1.2 ou superior, evitando qualquer versão do protocolo SSL devido à falhas conhecidas.
-# A aplicação também deve possuir um certificado digital assinado por uma autoridade certificadora, garantindo assim a confiabilidade e autenticidade do ambiente e da organização.
-# Adicionalmente, as configurações do servidor devem automaticamente redirecionar qualquer requisição HTTP insegura para o uso do HTTPS, conforme o exemplo abaixo:
-
-# Exemplo de configuração .htaccess:
-# RewriteEngine On 
-# RewriteCond %{SERVER_PORT} 80 
-# RewriteRule ^(.*)$ https://site.com/$1 [R,L]
