@@ -16,18 +16,17 @@ index:
   - 15: root-verification
   - 16: s3-without-criptography
   - 17: security-group-without-use
-  # - 18:
-  # - 19:
-  # - 20:
-  # - 21:
-  # - 22:
-  # - 23:
-  # - 24:
-  # - 25:
-  # - 26:
-  # - 27:
-  # - 28:
-  # - 29:
-  # - 30:
-  # - 31:
-  # - 32:
+  - 18: ec2-ebs-without-crypto
+  - 19: security-group-allow-sensitive-traffic
+  - 20: load-balancer-allow-http
+  - 21: minimum-password-length
+  - 22: log-file-validation-disabled
+  - 23: staging-services-exposed
+  - 24: users-without-mfa
+  - 25: log-integriity-disabled
+  - 26: password-policy-reuse
+  - 27: s3-without-backup
+  - 28: ebs-without-encryption-on-snapshot
+  - 29: hardcoded-info-in-lambda
+  - 30: s3-with-listining
+  - 31: iam-group-without-users
