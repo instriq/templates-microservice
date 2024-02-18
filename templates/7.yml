@@ -1,17 +1,17 @@
 vulnerability:
   name:
-    pt-br:
-    en:
-    es:
+    pt-br: Política de senha permite a reutilização de senhas
+    en: Password policy allows password reuse
+    es: La política de contraseñas permite la reutilización de contraseñas
   type: cloud
   category: Other
   description:
-    pt-br:
-    en:
-    es:
+    pt-br: A prática de prevenção de reuso de senhas é uma medida de segurança importante para proteger contas. Essa prática impede que os usuários utilizem a mesma senha em várias vezes. Na política atual o usuário é obrigado a trocar sua senha no máximo a cada 90 dias, mas ele pode trocar pela por outra senha e depois voltar a anterior, burlando a política. Ativando o recurso de não reutilização de senha, fica impossível de burlar com esse método. Quando os usuários são autorizados a reutilizar senhas antigas, isso cria uma superfície de ataque maior, pois senhas antigas podem ter sido comprometidas no passado e estão em listas de senhas vazadas. Impedir a reutilização de senhas antigas ajuda a reduzir o risco de que uma senha previamente comprometida possa ser usada novamente por um atacante.
+    en: The practice of preventing password reuse is an important security measure to protect accounts. This practice prevents users from using the same password multiple times. In the current policy, the user is required to change their password at most every 90 days, but they can change it to another password and then return to the previous one, bypassing the policy. By activating the feature of not reusing the password, it becomes impossible to bypass with this method. When users are allowed to reuse old passwords, this creates a larger attack surface, as old passwords may have been compromised in the past and are on leaked password lists. Preventing the reuse of old passwords helps reduce the risk that a previously compromised password can be used again by an attacker.
+    es: La práctica de prevenir la reutilización de contraseñas es una medida de seguridad importante para proteger las cuentas. Esta práctica evita que los usuarios utilicen la misma contraseña varias veces. En la política actual, se requiere que el usuario cambie su contraseña como máximo cada 90 días, pero puede cambiarla por otra contraseña y luego volver a la anterior, evitando la política. Al activar la función de no reutilizar la contraseña, se vuelve imposible de evitar con este método. Cuando se permite a los usuarios reutilizar contraseñas antiguas, esto crea una superficie de ataque más grande, ya que las contraseñas antiguas pueden haber sido comprometidas en el pasado y estar en listas de contraseñas filtradas. Evitar la reutilización de contraseñas antiguas ayuda a reducir el riesgo de que una contraseña previamente comprometida pueda ser utilizada nuevamente por un atacante.
   recommendation:
-    pt-br:
-    en:
-    es:
+    pt-br: Basta ativar na política global de senhas o recurso para que não seja permitido reutilização de senhas.
+    en: Just activate the feature in the global password policy so that password reuse is not allowed.
+    es: Simplemente active la función en la política global de contraseñas para que no se permita la reutilización de contraseñas.
   references:
-    - 
+    - https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_account-policy.html

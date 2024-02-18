@@ -1,8 +1,8 @@
 vulnerability:
   name:
     pt-br: S3 Bucket sem criptografia ativada
-    en:
-    es:
+    en: S3 Bucket without encryption enabled
+    es: S3 Bucket sin encryption habilitado
   type: cloud
   category: Other
   description:

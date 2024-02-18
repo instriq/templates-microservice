@@ -1,8 +1,8 @@
 vulnerability:
   name:
-    pt-br: EBS com Snapshot sem criptografia
-    en: EBS with unencrypted Snapshot
-    es: EBS con Snapshot sin encryption
+    pt-br: EC2 utilizando volumes EBS sem criptografia
+    en: EC2 using unencrypted EBS volumes
+    es: EC2 utilizando volúmenes EBS sin encryption
   type: cloud
   category: Other
   description:

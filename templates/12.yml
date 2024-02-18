@@ -1,8 +1,8 @@
 vulnerability:
   name:
-    pt-br:
-    en:
-    es:
+    pt-br: Comprimento mínimo da senha é muito curto
+    en: Minimum password length is too short
+    es: La longitud mínima de la contraseña es demasiado corta
   type: cloud
   category: Other
   description:
@@ -10,8 +10,8 @@ vulnerability:
     en:
     es:
   recommendation:
-    pt-br:
-    en:
-    es:
+    pt-br: Como estamos inseridos em um contexto extremamente crítico, a recomendação é que a conta exigi pelo menos 12 caracteres.
+    en: As we are in an extremely critical context, the recommendation is that the account requires at least 12 characters.
+    es: Como estamos en un contexto extremadamente crítico, la recomendación es que la cuenta requiera al menos 12 caracteres.
   references:
-    - 
+    - https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_account-policy.html

@@ -7,11 +7,11 @@ vulnerability:
   category: Other
   description:
     pt-br: O uso crescente de dispositivos móveis, principalmente em ambientes wireless, aumentou a viabilidade dos ataques conhecidos como man-in-the-middle, tornado mandatório o uso de SSL/TLS para as conexões feitas por dispositivos móveis.Ataques man-in-the-middle consistem em interceptar a conexão entre o usuário (vítima) e o servidor e com isso capturar e/ou alterar os dados, o uso de SSL/TLS (HTTPS) mitiga tal problema, pois para a realização da conexão é necessário a verificação do certificado através de um Certificate Autority.Porém mesmo com o uso de HTTPS é possível que a aplicação tenha suas requisições interceptadas por um atacante, bastando para isso que seja instalado um certificado do atacante no dispositivo móvel da vitima.Para mitigar este problema a solução consiste em fixar na aplicação a chave pública ou certificado do servidor assim como o host associado, esta técnica é conhecida como Certificate Pinning.
-    en:
-    es:
+    en: The increasing use of mobile devices, especially in wireless environments, has increased the viability of attacks
+    es: El uso creciente de dispositivos móviles, principalmente en entornos inalámbricos, ha aumentado la viabilidad de los ata
   recommendation:
     pt-br: Implementar a técnica de Certificate Pinning garante que a aplicação confie apenas no certificado do servidor.Certificate Pinning consiste em fixar na aplicação a chave pública ou certificado do servidor assim como o host associado, com isso, mesmo que existam outros certificados/CAs no dispositivo móvel, o utilizado para a aplicação realizar a conexão será o fixado.Certificate Pinning pode ser realizado adicionando um CAs na aplicação ou adicionando a chave pública diretamente no código, um exemplo pode ser encontrado no código da OWASP.
-    en:
-    es:
+    en: Implementing the Certificate Pinning technique ensures that the application trusts only the server certificate. Certificate Pinning consists of fixing the server's public key or certificate in the application as well as the associated host. With this, even if there are other certificates/CAs on the mobile device, the one used for the application to make the connection will be the fixed one. Certificate Pinning can be performed by adding a CAs in the application or adding the public key directly to the code, an example can be found in the OWASP code.
+    es: Implementar la técnica de Certificate Pinning garantiza que la aplicación confíe solo en el certificado del servidor. Certificate Pinning consiste en fijar la clave pública o el certificado del servidor en la aplicación, así como el host asociado. Con esto, incluso si hay otros certificados/CAs en el dispositivo móvil, el utilizado para que la aplicación realice la conexión será el fijo. Certificate Pinning se puede realizar agregando un CAs en la aplicación o agregando la clave pública directamente en el código, un ejemplo se puede encontrar en el código de OWASP.
   references:
     - https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning

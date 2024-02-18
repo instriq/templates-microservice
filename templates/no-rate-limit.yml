@@ -2,7 +2,7 @@ vulnerability:
   name:
     pt-br: Falta de controles contra ataques automatizados
     en: Lack of controls against automated attacks
-    es:
+    es: Falta de controles contra ataques automatizados
   type: web
   category: Other
   description:

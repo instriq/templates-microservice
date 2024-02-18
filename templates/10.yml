@@ -1,8 +1,8 @@
 vulnerability:
   name:
-    pt-br:
-    en:
-    es:
+    pt-br: Serviços de homologação exposto para Internet
+    en: Staging services exposed to the Internet
+    es: Servicios de homologación expuestos a Internet
   type: cloud
   category: Other
   description:
@@ -14,4 +14,5 @@ vulnerability:
     en:
     es:
   references:
-    - 
+    - https://owasp.org/Top10/A05_2021-Security_Misconfiguration/
+    - https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html

@@ -1,8 +1,8 @@
 vulnerability:
   name:
-    pt-br:
-    en:
-    es:
+    pt-br: Validação do arquivo de log está desativada 
+    en: Log file validation is disabled
+    es: La validación del archivo de registro está deshabilitada
   type: cloud
   category: Other
   description:
@@ -14,4 +14,4 @@ vulnerability:
     en:
     es:
   references:
-    - 
+    - https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-log-file-validation-enabling.html

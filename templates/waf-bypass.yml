@@ -7,12 +7,12 @@ vulnerability:
   category: Other
   description:
     pt-br: O Web Application Firewall é uma solução que busca proteger a aplicação de diversas vulnerabilidades web conhecidas, intermediando as conexões cliente-servidor e filtrando cada entrada e saida de dados a fim de encontrar uma possível requisição maliciosa ou um vazamento de dados. Além de poder assumir funções de cache de conteúdo e CDN (Content Celivery network). Foi possível acessar a aplicação sem a intermediação do Web Application Firewall (WAF). Com esse tipo de ataque, é possível efetuar requisições maliciosas na aplicação sem o bloqueio da solução de WAF, assim, expondo as vulnerabilidades presentes no ambiente e acessando informações que antes não eram possíveis através dessa intermediação.
-    en:
-    es:
+    en: The Web Application Firewall is a solution that seeks to protect the application from various known web vulnerabilities, mediating client-server connections and filtering each input and output of data in order to find a possible malicious request or a data leak. In addition to being able to assume content caching and CDN (Content Delivery Network) functions. It was possible to access the application without the mediation of the Web Application Firewall (WAF). With this type of attack, it is possible to make malicious requests to the application without the blocking of the WAF solution, thus exposing the vulnerabilities present in the environment and accessing information that was not previously possible through this mediation.
+    es: El Web Application Firewall es una solución que busca proteger la aplicación de varias vulnerabilidades web conocidas, mediando las conexiones cliente-servidor y filtrando cada entrada y salida de datos para encontrar una posible solicitud maliciosa o una fuga de datos. Además de poder asumir funciones de almacenamiento en caché de contenido y CDN (Red de entrega de contenido). Fue posible acceder a la aplicación sin la mediación del Web Application Firewall (WAF). Con este tipo de ataque, es posible realizar solicitudes maliciosas a la aplicación sin el bloqueo de la solución WAF, exponiendo así las vulnerabilidades presentes en el entorno y accediendo a información que antes no era posible a través de esta mediación.
   recommendation:
     pt-br: Recomendamos que as portas de serviço sejam fechadas para a Internet e limitadas apenas para os endereços IP's fornecidos pela sua solução de WAF. A configuração pode ser feita por meio do webserver ou firewall.
-    en:
-    es:
+    en: We recommend that the service ports be closed to the Internet and limited only to the IP addresses provided by your WAF solution. The configuration can be done through the webserver or firewall.
+    es: Recomendamos que los puertos de servicio estén cerrados a Internet y limitados solo a las direcciones IP proporcionadas por su solución WAF. La configuración se puede realizar a través del servidor web o firewall.
   references:
     - https://www.cloudflare.com/ips/
     - https://owasp.org/www-pdf-archive/OWASP_Stammtisch_Frankfurt_-_Web_Application_Firewall_Bypassing_-_how_to_defeat_the_blue_team_-_2015.10.29.pdf

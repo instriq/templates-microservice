@@ -1,8 +1,8 @@
 vulnerability:
   name:
-    pt-br:
-    en:
-    es:
+    pt-br: Listagem habilitada em um S3 Bucket público
+    en: Listing enabled in a public S3 Bucket
+    es: Listado habilitado en un S3 Bucket público
   type: cloud
   category: Other
   description:
@@ -14,4 +14,4 @@ vulnerability:
     en:
     es:
   references:
-    - 
+    - https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html

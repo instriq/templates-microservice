@@ -1,8 +1,8 @@
 vulnerability:
   name:
-    pt-br:
-    en:
-    es:
+    pt-br: S3 Bucket sem versionamento (backup) ativo
+    en: S3 Bucket without versioning (backup) enabled
+    es: S3 Bucket sin versionamiento (backup) habilitado
   type: cloud
   category: Other
   description:
@@ -14,4 +14,4 @@ vulnerability:
     en:
     es:
   references:
-    - 
+    - https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html

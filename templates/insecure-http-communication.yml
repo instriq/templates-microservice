@@ -6,11 +6,11 @@ vulnerability:
   type: web
   category: Other
   description:
-    pt-br:
-    en:
-    es:
+    pt-br:  A aplicação Web não utiliza mecanismos de comunicação segura (HTTPS). Isso permite que usuários maliciosos no mesmo ambiente de rede realizem ataques, interceptando os dados trafegados entre cliente e servidor, podendo levar ao vazamento de informações sensíveis.
+    en: The Web application does not use secure communication mechanisms (HTTPS). This allows malicious users in the same network environment to perform attacks, intercepting data transmitted between the client and server, which can lead to the leakage of sensitive information.
+    es: La aplicación web no utiliza mecanismos de comunicación segura (HTTPS). Esto permite que los usuarios maliciosos en el mismo entorno de red realicen ataques, interceptando los datos transmitidos entre el cliente y el servidor, lo que puede provocar la fuga de información sensible.
   recommendation:
-    pt-br:
+    pt-br: 
     en:
     es:
   references:

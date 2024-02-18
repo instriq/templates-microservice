@@ -1,17 +1,17 @@
 vulnerability:
   name:
-    pt-br:
-    en:
-    es:
+    pt-br: IAM Group sem nenhum usuário vinculado
+    en: IAM Group without any user linked
+    es: IAM Group sin ningún usuario vinculado
   type: cloud
   category: Other
   description:
-    pt-br:
-    en:
-    es:
+    pt-br: Revisando os grupos do IAM, foi encontrado um onde não tem nenhum usuário vinculado. Isso indica que o Grupo não está sendo utilizado, sugerimos que seja avaliado esse caso e se confirmado, realizar a exclusão do mesmo pois assim a superfície de ataque pode diminuir e também facilita a gestão dos demais grupos que são utilizados no dia-a-dia.
+    en: Reviewing the IAM groups, one was found where there is no user linked. This indicates that the Group is not being used, we suggest that this case be evaluated and if confirmed, the deletion of the group should be performed, as this can reduce the attack surface and also facilitate the management of the other groups that are used on a daily basis.
+    es: Revisando los grupos de IAM, se encontró uno donde no hay ningún usuario vinculado. Esto indica que el Grupo no se está utilizando, sugerimos que se evalúe este caso y, si se confirma, se realice la eliminación del grupo, ya que esto puede reducir la superficie de ataque y también facilitar la gestión de los demás grupos que se utilizan a diario.
   recommendation:
-    pt-br:
-    en:
-    es:
+    pt-br: Após avaliação, se confirmado que o grupo não é utilizado basta executar o comando $ aws iam delete-group --group-name <<group-name>>
+    en: After evaluation, if confirmed that the group is not used, just run the command $ aws iam delete-group --group-name <<group-name>>
+    es: Después de la evaluación, si se confirma que el grupo no se utiliza, simplemente ejecute el comando $ aws iam delete-group --group-name <<group-name>>
   references:
-    - 
+    - https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html
