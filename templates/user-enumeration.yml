@@ -6,12 +6,12 @@ vulnerability:
   type: web
   category: Other
   description:
-    pt-br: É possível enumerar usuários válidos no sistema por meio da realização de múltiplas requisições seguidas, possibilitando também que ataques de negação de serviço sejam realizados devido ao consumo excessivo de recursos.
-    en: It is possible to enumerate valid users in the system by making multiple consecutive requests, also allowing denial of service attacks to be performed due to excessive resource consumption.
-    es: Es posible enumerar usuarios válidos en el sistema realizando múltiples solicitudes consecutivas, lo que también permite realizar ataques de denegación de servicio debido al consumo excesivo de recursos.
+    pt-br: 
+    en:  
+    es:
   recommendation:
-    pt-br: Deve-se inicialmente monitorar as sucessivas tentativas de acesso. Uma vez identificada as sucessivas tentativas de acesso deve-se buscar bloquear o ponto de origem dos ataque. Recomenda-se, neste caso, que o bloqueio seja temporário. Outra possível solução é aumentar o tempo de resposta tornando inviável uma automação deste tipo de ataque.
-    en: Initially, successive access attempts should be monitored. Once successive access attempts have been identified, the source of the attack should be blocked. In this case, it is recommended that the block be temporary. Another possible solution is to increase the response time, making it unfeasible to automate this type of attack.
-    es: Inicialmente, se deben monitorear los intentos de acceso sucesivos. Una vez identificados los intentos de acceso sucesivos, se debe bloquear la fuente del ataque. En este caso, se recomienda que el bloqueo sea temporal. Otra posible solución es aumentar el tiempo de respuesta, lo que hace inviable automatizar este tipo de ataque.
+    pt-br: 
+    en:  
+    es:
   references:
     - https://wiki.owasp.org/index.php/Testing_for_User_Enumeration_and_Guessable_User_Account_(OWASP-AT-002)
