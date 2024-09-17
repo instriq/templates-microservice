@@ -6,12 +6,13 @@ vulnerability:
   type: cloud
   category: Other
   description:
-    pt-br: Revisando os grupos do IAM, foi encontrado um onde não tem nenhum usuário vinculado. Isso indica que o Grupo não está sendo utilizado, sugerimos que seja avaliado esse caso e se confirmado, realizar a exclusão do mesmo pois assim a superfície de ataque pode diminuir e também facilita a gestão dos demais grupos que são utilizados no dia-a-dia.
-    en: Reviewing the IAM groups, one was found where there is no user linked. This indicates that the Group is not being used, we suggest that this case be evaluated and if confirmed, the deletion of the group should be performed, as this can reduce the attack surface and also facilitate the management of the other groups that are used on a daily basis.
-    es: Revisando los grupos de IAM, se encontró uno donde no hay ningún usuario vinculado. Esto indica que el Grupo no se está utilizando, sugerimos que se evalúe este caso y, si se confirma, se realice la eliminación del grupo, ya que esto puede reducir la superficie de ataque y también facilitar la gestión de los demás grupos que se utilizan a diario.
+    pt-br: Existem grupos do IAM que não possuem usuários vinculados. Realizar a exclusão de grupos desnecessários pode auxiliar na redução da superfície de ataque e facilitar a gestão e revisão dos grupos utilizados na organização.
+    en: There are IAM groups that do not have any users linked. Removing unnecessary groups can help reduce the attack surface and facilitate the management and review of the groups used in the organization.
+    es: Existen grupos de IAM que no tienen usuarios vinculados. Eliminar los grupos innecesarios puede ayudar a reducir la superficie de ataque y facilitar la gestión y revisión de los grupos utilizados en la organización.
   recommendation:
-    pt-br: Após avaliação, se confirmado que o grupo não é utilizado basta executar o comando $ aws iam delete-group --group-name <<group-name>>
-    en: After evaluation, if confirmed that the group is not used, just run the command $ aws iam delete-group --group-name <<group-name>>
-    es: Después de la evaluación, si se confirma que el grupo no se utiliza, simplemente ejecute el comando $ aws iam delete-group --group-name <<group-name>>
+    pt-br: Após a avaliação, se concluído que o grupo não é mais necessário, realize sua exclusão do ambiente.
+    en: After evaluation, if it is concluded that the group is no longer needed, proceed with its removal from the environment.
+    es: Tras la evaluación, si se concluye que el grupo ya no es necesario, proceda con su eliminación del entorno.
   references:
     - https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html
+    - https://www.trendmicro.com/cloudoneconformity-staging/knowledge-base/aws/IAM/unused-iam-user.html#

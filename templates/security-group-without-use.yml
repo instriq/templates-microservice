@@ -6,12 +6,12 @@ vulnerability:
   type: cloud
   category: Other
   description:
-    pt-br: Analisando cada um dos Security Groups presente na conta, foram identificados que alguns deles não estão sendo utilizado em nenhum lugar e por isso podemos considerar a exclusão dos mesmos. Isso não representa uma vulnerabilidade de fato, mas é interessante para diminuir a superfície de ataque e para se previnir de erros humanos. Também contribuí com uma melhor visibilidade para os demais security groups.
-    en: Analyzing each of the Security Groups present in the account, it was identified that some of them are not being used anywhere and therefore we can consider deleting them. This does not actually represent a vulnerability, but it is interesting to reduce the attack surface and to prevent human errors. It also contributes to better visibility for the other security groups.
-    es: Al analizar cada uno de los Security Groups presentes en la cuenta, se identificó que algunos de ellos no se están utilizando en ningún lugar y, por lo tanto, podemos considerar eliminarlos. Esto no representa una vulnerabilidad en realidad, pero es interesante para reducir la superficie de ataque y prevenir errores humanos. También contribuye a una mejor visibilidad para los demás security groups.
+    pt-br: Existem Security Groups não utilizados no ambiente. A exclusão desses grupos ajuda a reduzir a superfície de ataque e a prevenir erros humanos. Além disso, garante melhor visibilidade para os demais grupos de segurança.
+    en: There are unused Security Groups in the environment. Deleting these unused groups helps reduce the attack surface and prevent human errors. Additionally, it ensures better visibility for the remaining security groups.
+    es: Existen Security Groups no utilizados en el entorno. Eliminar estos grupos no utilizados ayuda a reducir la superficie de ataque y a prevenir errores humanos. Además, garantiza una mejor visibilidad para los grupos de seguridad restantes.
   recommendation:
-    pt-br: A sugestão aqui é descontinuar esse Security Group fazendo a exclusão do mesmo.
-    en: The suggestion here is to discontinue this Security Group by deleting it.
-    es: La sugerencia aquí es descontinuar este Security Group eliminándolo.
+    pt-br: Exclusão de grupos inutilizados.
+    en: Deletion of unused groups.
+    es: Eliminación de grupos no utilizados.
   references:
     - https://docs.aws.amazon.com/vpc/latest/userguide/security-groups.html

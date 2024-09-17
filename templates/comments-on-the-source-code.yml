@@ -6,9 +6,9 @@ vulnerability:
   type: web
   category: Other
   description:
-    pt-br: Em várias partes do código, podemos ver comentários feitos pelos desenvolvedores, isso pode se tornar um incidente de segurança quando alguma informação sensível é comentada e/ou ajuda o invasor a entender mais sobre o aplicativo de destino.
-    en: In several parts of the code, we can see comments made by the developers, this can become a security incident when some sensitive information is commented and/or help the attacker to understand more about the target application.
-    es: En varias partes del código, podemos ver comentarios hechos por los desarrolladores, esto puede convertirse en un incidente de seguridad cuando se comenta alguna información sensible y/o ayuda al atacante a comprender más sobre la aplicación objetivo.
+    pt-br: Comentários feitos por desenvolvedores são visíveis no código da aplicação. Essas informações podem ajudar um agente malicioso a entender o funcionamento interno do sistema e/ou a configuração do ambiente.
+    en: Comments made by developers are visible in the application's code. This information can help a malicious actor understand the internal workings of the system and/or the configuration of the environment.
+    es: Comentarios realizados por desarrolladores son visibles en el código de la aplicación. Esta información puede ayudar a un agente malicioso a entender el funcionamiento interno del sistema y/o la configuración del entorno.
   recommendation:
     pt-br: Remova todos os comentários quando o aplicativo entrar em produção.
     en: Remove all comments when the application goes into production.

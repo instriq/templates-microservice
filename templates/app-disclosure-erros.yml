@@ -6,12 +6,13 @@ vulnerability:
   type: web
   category: Misconfiguration
   description:
-    pt-br: Vazamento de erros é uma vulnerabilidade em que uma aplicação revela dados sensíveis, tais como detalhes técnicos da aplicação web, ambiente, ou dados específicos do usuário. Dados confidenciais podem ser usados por um atacante para explorar a aplicação Web alvo, sua rede de hospedagem ou seus usuários. Em sua forma mais comum, o vazamento de erros é o resultado de manipulação incorreta de erros da aplicação, que podem revelar informações sensíveis como a localização do arquivo que gerou a exceção.
-    en: Bug leakage is a vulnerability where an application reveals sensitive data, such as technical details of the web application, environment, or user-specific data. Sensitive data can be used by an attacker to exploit the target web application, its hosting network or its users. In its most common form, error leakage is the result of incorrect application error handling, which can reveal sensitive information such as the location of the file that generated the exception.
-    es: 
+    pt-br: A aplicação expõe dados sensíveis nas mensagens de erro, como detalhes técnicos da aplicação, rede de hospedagem ou informações de usuários. Esses dados podem ser explorados por agentes maliciosos para realizar ataques cibernéticos contra a aplicação ou usuários expostos.
+    en: The application exposes sensitive data in error messages, such as technical details of the application, hosting network, or user information. This data can be exploited by malicious actors to launch cyberattacks against the application or exposed users.
+    es: La aplicación expone datos sensibles en los mensajes de error, como detalles técnicos de la aplicación, red de hospedaje o información de los usuarios. Estos datos pueden ser explotados por agentes maliciosos para realizar ataques cibernéticos contra la aplicación o los usuarios expuestos.
   recommendation:
-    pt-br: Use mensagens de erro genéricas personalizadas para evitar o vazamento de informações confidenciais em formação. Certifique-se de que cada entrada do usuário seja devidamente validada em todos os campos de entrada do aplicativo.
-    en: Use custom generic error messages to avoid leaking confidential information in formation. Make sure that each user input is properly validated in all input fields in the application.
-    es: 
+    pt-br: Utilize mensagens de erro genéricas e personalizadas para evitar o vazamento de informações confidenciais. Certifique-se de que todas as entradas dos usuários sejam devidamente validadas em todos os campos do aplicativo. Implemente logs e mecanismos de monitoramento para capturar e rastrear erros e exceções que ocorrerem na aplicação.
+    en: Use generic and custom error messages to prevent the leakage of confidential information. Ensure that all user inputs are properly validated in all input fields of the application. Implement logging and monitoring mechanisms to capture and track errors and exceptions that occur in the application.
+    es: Utilice mensajes de error genéricos y personalizados para evitar la filtración de información confidencial. Asegúrese de que todas las entradas de los usuarios sean debidamente validadas en todos los campos de entrada de la aplicación. Implemente registros y mecanismos de monitoreo para capturar y rastrear errores y excepciones que ocurran en la aplicación.
   references:
     - https://www.owasp.org/index.php/Improper_Error_Handling
+    - https://cwe.mitre.org/data/definitions/209.html
