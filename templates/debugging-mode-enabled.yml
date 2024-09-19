@@ -3,7 +3,7 @@ vulnerability:
     pt-br: A aplicação permite ser depurada
     en: Debugging mode enabled
     es: Modo de depuración habilitado
-  type: web and mobile
+  type: web, mobile
   category: Other
   description:
     pt-br: A aplicação permite a depuração. Ao conectar um depurador ao sistema, atacantes podem realizar uma análise detalhada do funcionamento do aplicativo, estado das variáveis, entre outros aspectos. Informações sensíveis, como dados pessoais (PII) ou senhas, também podem vazar nos logs de depuração.

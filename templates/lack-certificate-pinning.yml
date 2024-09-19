@@ -3,7 +3,7 @@ vulnerability:
     pt-br: Ausência de mecanismo de Certificate Pinning
     en: Lack of Certificate Pinning mechanism
     es: Falta de mecanismo de fijación de certificados
-  type: web and mobile
+  type: web, mobile
   category: Other
   description:
     pt-br: A aplicação não possui chave pública ou certificado do servidor, assim como o host associado fixado. Por isso, agentes maliciosos podem interceptar a conexão entre a vítima e o servidor ao instalar um certificado de segurança do atacante no dispositivo alvo, capturando e/ou alterando os dados em trânsito.
