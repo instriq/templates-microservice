@@ -6,7 +6,7 @@ vulnerability:
   type: cloud
   category: Other
   description:
-    pt-br: O Recurso de autenticação multifator (MFA) não está configurado. Essa medida de segurança adicional exige que usuários forneçam duas ou mais formas de autenticação antes de acessar um recurso ou realizar ações. Esse recurso é essencial para garantir que em caso de credenciais vazadas, o acesso a recursos esteja protegido por mais de um fator.
+    pt-br: O recurso de autenticação multifator (MFA) não está configurado. Essa medida de segurança adicional exige que usuários forneçam duas ou mais formas de autenticação antes de acessar um recurso ou realizar ações. Esse recurso é essencial para garantir que em caso de credenciais vazadas, o acesso a recursos esteja protegido por mais de um fator.
     en: The Multi-Factor Authentication (MFA) feature is not configured. This additional security measure requires users to provide two or more forms of authentication before accessing a resource or performing actions. This feature is essential to ensure that in case of credential leakage, access to resources is protected by more than one factor.
     es: El recurso de autenticación multifactor (MFA) no está configurado. Esta medida de seguridad adicional requiere que los usuarios proporcionen dos o más formas de autenticación antes de acceder a un recurso o realizar acciones. Este recurso es esencial para garantizar que, en caso de filtración de credenciales, el acceso a los recursos esté protegido por más de un factor.
   recommendation:
