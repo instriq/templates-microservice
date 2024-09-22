@@ -10,9 +10,9 @@ vulnerability:
     en: The unnecessary exposure of services in staging environments can present risks from information leakage to features that have not yet been announced to the market as a possibility of services that do not have the same security controls as the production environment.
     es: La exposición innecesaria de servicios en entornos de homologación puede presentar riesgos desde la fuga de información hasta características que aún no se han anunciado en el mercado como la posibilidad de servicios que no tienen los mismos controles de seguridad que el entorno de producción.
   recommendation:
-    pt-br: O acesso a ambientes que contêm ativos sensíveis deve ser restrito a redes privadas (VPNs) ou a IPs específicos por meio de listas de permissões.
-    en: Access to environments containing sensitive assets should be restricted to private networks (VPNs) or specific IPs through whitelists.
-    es: El acceso a entornos que contienen activos sensibles debe estar restringido a redes privadas (VPNs) o a IPs específicas mediante listas de permitidos.
+    pt-br: É fortemente recomendado que para acessar os ativos nesse ambiente seja necessário fazer o uso de VPNs pois se tratam de ativos sensíveis e ainda em fase de testes. Se VPN não for uma possibilidade, outro possível caminho é fazer restrições aos IPs específicos das pessoas que precisam fazer o uso. 
+    en: It is strongly recommended that to access the assets in this environment it is necessary to use VPNs as they are sensitive assets and still in the testing phase. If VPN is not a possibility, another possible path is to restrict to the specific IPs of the people who need to use it.
+    es: Es muy recomendable que para acceder a los activos en este entorno sea necesario utilizar VPN, ya que son activos sensibles y aún están en fase de pruebas. Si VPN no es una posibilidad, otro posible camino es restringir a las IPs específicas de las personas que necesitan usarlo.
   references:
     - https://owasp.org/Top10/A05_2021-Security_Misconfiguration/
     - https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html
