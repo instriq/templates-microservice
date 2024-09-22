@@ -6,12 +6,12 @@ vulnerability:
   type: cloud
   category: Other
   description:
-    pt-br: Identificamos a presença de alguns Load Balancers na conta da AWS, o que é uma boa prática a ser aplicada para contribuir com o pilar de disponibilidade para as aplicações. Mas analisando cada detalhe é possível notar que o tráfego em texto plano, em HTTP, na porta 80 é permitido em alguns. Permitir tráfego de entrada e de saída de qualquer IP para qualquer IP na porta 80 mostra que trata de um serviço HTTP. Esse comportamento apresenta um risco pois delega a responsabilidade de usar o canal criptografado para a aplicação e para o cliente, se eles não o fizerem, a comunicação fica suscetível a intercepção por atacantes.
-    en: We identified the presence of some Load Balancers in the AWS account, which is a good practice to be applied to contribute to the availability pillar for applications. But analyzing every detail it is possible to notice that plain text traffic, in HTTP, on port 80 is allowed in some. Allowing inbound and outbound traffic from any IP to any IP on port 80 shows that it is an HTTP service. This behavior presents a risk because it delegates the responsibility of using the encrypted channel to the application and to the client, if they do not do it, the communication becomes susceptible to interception by attackers.
-    es: Identificamos la presencia de algunos Load Balancers en la cuenta de AWS, lo cual es una buena práctica que se debe aplicar para contribuir al pilar de disponibilidad para las aplicaciones. Pero al analizar cada detalle, es posible notar que se permite el tráfico en texto plano, en HTTP, en el puerto 80 en algunos. Permitir tráfico de entrada y salida desde cualquier IP a cualquier IP en el puerto 80 muestra que se trata de un servicio HTTP. Este comportamiento presenta un riesgo porque delega la responsabilidad de usar el canal cifrado a la aplicación y al cliente, si no lo hacen, la comunicación se vuelve susceptible a la intercepción por parte de atacantes.
+    pt-br: O tráfego de entrada e saída pela porta 80 (protocolo HTTP) no Load Balancer da conta AWS está permitido. Esse comportamento representa um risco, pois, caso o cliente não utilize um canal criptografado, a comunicação ficará suscetível à interceptação por atacantes.
+    en: Inbound and outbound traffic on port 80 (HTTP protocol) is allowed on the Load Balancer of the AWS account. This behavior represents a risk because if the client does not use an encrypted channel, the communication will be susceptible to interception by attackers.
+    es: El tráfico de entrada y salida a través del puerto 80 (protocolo HTTP) está permitido en el Load Balancer de la cuenta de AWS. Este comportamiento representa un riesgo, ya que, si el cliente no utiliza un canal cifrado, la comunicación será susceptible de ser interceptada por atacantes.
   recommendation:
-    pt-br: Analisar a possibilidade de permitir tráfego apenas na porta 443 por se tratar de um canal com criptografia.
-    en: Analyze the possibility of allowing traffic only on port 443 as it is an encrypted channel.
-    es: Analice la posibilidad de permitir el tráfico solo en el puerto 443, ya que es un canal cifrado.
+    pt-br: Avaliar a possibilidade de permitir tráfego apenas pelo protocolo HTTPS (porta 443), por se tratar de um canal criptografado.
+    en: Evaluate the possibility of allowing traffic only via the HTTPS protocol (port 443), as it is an encrypted channel.
+    es: Evaluar la posibilidad de permitir tráfico únicamente a través del protocolo HTTPS (puerto 443), ya que se trata de un canal cifrado.
   references:
     - https://docs.aws.amazon.com/vpc/latest/userguide/security-groups.html

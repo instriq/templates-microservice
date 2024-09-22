@@ -6,12 +6,12 @@ vulnerability:
   type: cloud
   category: Other
   description:
-    pt-br: O recurso de MFA (Autenticação Multifator) na AWS, é uma medida de segurança adicional que exige que os usuários forneçam duas ou mais formas de autenticação antes de acessar recursos ou realizar ações na plataforma. Normalmente, o MFA envolve o uso de algo que o usuário sabe (a senha) e algo que o usuário possui (geralmente um dispositivo físico, como um smartphone ou um token de hardware).
-    en: The MFA (Multifactor Authentication) feature in AWS is an additional security measure that requires users to provide two or more forms of authentication before accessing resources or performing actions on the platform. Typically, MFA involves using something the user knows (the password) and something the user has (usually a physical device, such as a smartphone or a hardware token).
-    es: La función MFA (Autenticación Multifactor) en AWS es una medida de seguridad adicional que requiere que los usuarios proporcionen dos o más formas de autenticación antes de acceder a recursos o realizar acciones en la plataforma. Normalmente, MFA implica el uso de algo que el usuario sabe (la contraseña) y algo que el usuario tiene (generalmente un dispositivo físico, como un teléfono inteligente o un token de hardware).
+    pt-br: O recurso de autenticação multifator (MFA) não está configurado. Essa medida de segurança adicional exige que usuários forneçam duas ou mais formas de autenticação antes de acessar um recurso ou realizar ações. Esse recurso é essencial para garantir que em caso de credenciais vazadas, o acesso a recursos esteja protegido por mais de um fator.
+    en: The Multi-Factor Authentication (MFA) feature is not configured. This additional security measure requires users to provide two or more forms of authentication before accessing a resource or performing actions. This feature is essential to ensure that in case of credential leakage, access to resources is protected by more than one factor.
+    es: El recurso de autenticación multifactor (MFA) no está configurado. Esta medida de seguridad adicional requiere que los usuarios proporcionen dos o más formas de autenticación antes de acceder a un recurso o realizar acciones. Este recurso es esencial para garantizar que, en caso de filtración de credenciales, el acceso a los recursos esté protegido por más de un factor.
   recommendation:
-    pt-br: Recomendamos fortemente que seja ativado o uso obrigatório de MFA em todas as contas da AWS, independente dos ambientes serem produtivos ou de homologação.
-    en: We strongly recommend that the mandatory use of MFA be activated in all AWS accounts, regardless of whether the environments are productive or homologation.
-    es: Recomendamos encarecidamente que se active el uso obligatorio de MFA en todas las cuentas de AWS, independientemente de si los entornos son productivos o de homologación.
+    pt-br: Exija o uso de MFA em todas as contas de acesso.
+    en: Require the use of MFA on all access accounts.
+    es: Exija el uso de MFA en todas las cuentas de acceso.
   references:
     - https://aws.amazon.com/iam/features/mfa/

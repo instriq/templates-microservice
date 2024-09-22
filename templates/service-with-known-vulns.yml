@@ -6,13 +6,13 @@ vulnerability:
   type: web
   category: Other
   description:
-    pt-br: Durante o pentest foi possível identificar alguns serviços operando em versões que podem ser consideradas desatualizadas e com vulnerabilidades (CVEs) conhecidas. Isso demonstra que tal serviço tem chances significativas de ser explorado por agentes mal-intencionados.
-    en: During the pentest it was possible to identify some services operating in versions that can be considered outdated and with known vulnerabilities (CVEs). This demonstrates that such a service has significant chances of being exploited by malicious agents.
-    es: Durante el pentest fue posible identificar algunos servicios operando en versiones que pueden considerarse desactualizadas y con vulnerabilidades (CVEs) conocidas. Esto demuestra que existe una probabilidad significativa de que dicho servicio sea explotado por agentes maliciosos.
+    pt-br: Existem serviços operando em versões desatualizadas e inseguras. Serviços que rodam em versões inseguras e com vulnerabilidades conhecidas (CVEs) podem ser explorados por agentes mal-intencionados e causar grandes prejuízos ao ambiente.
+    en: There are services running on outdated and insecure versions. Services running on insecure versions with known vulnerabilities (CVEs) can be exploited by malicious actors and cause significant harm to the environment.
+    es: Existen servicios que operan en versiones desactualizadas e inseguras. Los servicios que funcionan en versiones inseguras y con vulnerabilidades conocidas (CVEs) pueden ser explotados por actores maliciosos y causar grandes daños al entorno.
   recommendation:
-    pt-br: Recomendados que tal serviço seja atualizado para a versão mais recente que esteja disponível no momento. Se por alguma complicação isso não for possível, deve-se no mínimo aplicar o patch em questão.
-    en: It is recommended that such service be updated to the latest version available at the moment. If for some complication this is not possible, at least the patch in question should be applied.
-    es: Se recomienda que dicho servicio se actualice a la versión más reciente disponible en el momento. Si por alguna complicación esto no es posible, al menos se debe aplicar el parche en cuestión.
+    pt-br: Os serviços devem ser atualizados para a versão mais recente e estável disponível no momento. Caso não seja possível, os patches de correção devem ser aplicados.
+    en: Services should be updated to the latest stable version available. If this is not possible, corrective patches should be applied.
+    es: Los servicios deben ser actualizados a la versión más reciente y estable disponible. Si esto no es posible, se deben aplicar los parches de corrección.
   references:
     - https://owasp.org/www-project-vulnerability-management-guide/
     - https://owaspsamm.org/model/operations/environment-management/stream-b/

@@ -3,16 +3,16 @@ vulnerability:
     pt-br: A aplicação permite ser depurada
     en: Debugging mode enabled
     es: Modo de depuración habilitado
-  type: web
+  type: web, mobile
   category: Other
   description:
-    pt-br: A opção de depuração do aplicativo está habilitada. Isso permite que os invasores conectem um depurador ao aplicativo em execução para uma análise mais aprofundada de como funciona. Um invasor pode despejar rastreamentos de pilha e acessar classes auxiliares de depuração, o que poderia levar ao desvio de certas verificações de aplicativos ou ações para explorar uma vulnerabilidade. Informações sensíveis também podem vazar nos logs de depuração como PII ou senhas.
-    en: The application's debugging option is enabled. This allows attackers to connect a debugger to the running application for a deeper analysis of how it works. An attacker can dump stack traces and access debugging helper classes, which could lead to bypassing certain application checks or actions to exploit a vulnerability. Sensitive information can also leak in the debug logs such as PII or passwords.
-    es: La opción de depuración de la aplicación está habilitada. Esto permite que los atacantes conecten un depurador a la aplicación en ejecución para un análisis más profundo de cómo funciona. Un atacante puede volcar trazas de pila y acceder a clases auxiliares de depuración, lo que podría llevar a eludir ciertas comprobaciones o acciones de la aplicación para explotar una vulnerabilidad. La información sensible también puede filtrarse en los registros de depuración, como PII o contraseñas.
+    pt-br: A aplicação permite a depuração. Ao conectar um depurador ao sistema, atacantes podem realizar uma análise detalhada do funcionamento do aplicativo, estado das variáveis, entre outros aspectos. Informações sensíveis, como dados pessoais (PII) ou senhas, também podem vazar nos logs de depuração.
+    en: The application allows debugging. By connecting a debugger to the system, attackers can perform a detailed analysis of the application's functionality, including the state of variables and other aspects. Sensitive information, such as personal data (PII) or passwords, can also leak into debugging logs.
+    es: La aplicación permite la depuración. Al conectar un depurador al sistema, los atacantes pueden realizar un análisis detallado del funcionamiento de la aplicación, incluyendo el estado de las variables y otros aspectos. La información sensible, como datos personales (PII) o contraseñas, también puede filtrarse en los registros de depuración.
   recommendation:
-    pt-br: Desative a depuração do aplicativo no arquivo AndroidManifest.xml. Isso pode ser feito configurando o android:debuggable para false.
-    en: Disable the application's debugging in the AndroidManifest.xml file. This can be done by setting android:debuggable to false.
-    es: Deshabilite la depuración de la aplicación en el archivo AndroidManifest.xml. Esto se puede hacer configurando android:debuggable en false.
+    pt-br: Desative a opção de depuração na configuração da aplicação.
+    en: Disable the debugging option in the application configuration.
+    es: Desactiva la opción de depuración en la configuración de la aplicación.
   references:
     - https://developer.android.com/topic/security/risks/android-debuggable?hl=pt-br
     - https://github.com/OWASP/owasp-mastg/blob/master/Document/0x05j-Testing-Resiliency-Against-Reverse-Engineering.md
