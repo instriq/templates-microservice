@@ -1,0 +1,17 @@
+vulnerability:
+  name:
+    pt-br: Upload irrestrito de arquivos
+    en: Unrestricted file upload
+    es: carga de archivos sin restricciones
+  type: web
+  category: Input Validation Vulnerability
+  description:
+    pt-br: A aplicação permite o upload irrestrito de arquivos. A ausência de controles nesse processo representa um grande risco para o ambiente, pois pode ser explorada por atacantes para realizar diversos ataques diretos contra a aplicação, como a sobrescrita de dados e a execução de código malicioso, potencialmente levando ao controle do ambiente.
+    en: The application allows unrestricted file uploads. The lack of controls in this process poses a significant risk to the environment, as it can be exploited by attackers to carry out various direct attacks against the application, such as data overwriting and executing malicious code, potentially leading to control of the environment.
+    es: La aplicación permite la carga irrestricta de archivos. La ausencia de controles en este proceso representa un gran riesgo para el entorno, ya que puede ser explotada por atacantes para realizar diversos ataques directos contra la aplicación, como la sobrescritura de datos y la ejecución de código malicioso, lo que podría llevar al control del entorno.
+  recommendation:
+    pt-br: O upload de arquivos deve ser restrito apenas a tipos permitidos pela aplicação. Além disso, implemente filtros e verificação de conteúdo em todos os arquivos antes do carregamento no servidor. Remova todos os caracteres não convencionais dos nomes dos arquivos e também as extensões não permitidas. Por fim, garanta que o diretório onde os arquivos são carregados não tenha permissão de execução.
+    en: File uploads should be restricted to only the types allowed by the application. Additionally, implement filters and content verification on all files before uploading to the server. Remove all unconventional characters from file names and also any disallowed extensions. Finally, ensure that the directory where files are uploaded does not have execution permissions.
+    es: Las cargas de archivos deben estar restringidas solo a los tipos permitidos por la aplicación. Además, implemente filtros y verificación de contenido en todos los archivos antes de cargar en el servidor. Elimine todos los caracteres no convencionales de los nombres de archivo y también las extensiones no permitidas. Por último, asegúrese de que el directorio donde se cargan los archivos no tenga permisos de ejecución.
+  references:
+    - https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload

@@ -1,0 +1,18 @@
+vulnerability:
+  name:
+    pt-br: Divulgação do PHP-Info
+    en: PHP-Info disclosure
+    es: Divulgación de PHP-Info
+  type: web
+  category: Misconfiguration
+  description:
+    pt-br: PHP Info está exposto. A exposição do arquivo PHP Info é uma prática insegura. Embora muitos tutoriais recomendem a criação desse arquivo para fins de depuração, ele revela informações críticas sobre a configuração do servidor, como detalhes do ambiente, versão do PHP junto a suas extensões e configurações, variáveis de ambiente e caminhos internos. Isso pode ser explorado por atacantes para identificar vulnerabilidades e lançar ataques direcionados.
+    en: PHP Info is exposed. The exposure of the PHP Info file is an unsafe practice. Although many tutorials recommend creating this file for debugging purposes, it reveals critical information about the server configuration, such as environment details, PHP version along with its extensions and settings, environment variables, and internal paths. This can be exploited by attackers to identify vulnerabilities and launch targeted attacks.
+    es: PHP Info está expuesto. La exposición del archivo PHP Info es una práctica insegura. Aunque muchos tutoriales recomiendan la creación de este archivo para fines de depuración, revela información crítica sobre la configuración del servidor, como detalles del entorno, la versión de PHP junto con sus extensiones y configuraciones, variables de entorno y rutas internas. Esto puede ser explotado por atacantes para identificar vulnerabilidades y lanzar ataques dirigidos.
+  recommendation:
+    pt-br: Mantenha o acesso a arquivos que chamem a função phpinfo() restrito apenas a ambientes de desenvolvimento ou homologação, evitando sua exposição na internet em ambientes de produção.
+    en: Restrict access to files that call the phpinfo() function only to development or staging environments, preventing their exposure on the internet in production environments.
+    es: Restringe el acceso a archivos que llamen a la función phpinfo() únicamente a entornos de desarrollo o homologación, evitando su exposición en internet en entornos de producción.
+  references:
+    - https://www.tenable.com/plugins/was/98223
+    - https://www.acunetix.com/vulnerabilities/web/phpinfo-pages/
