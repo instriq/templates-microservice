@@ -1,0 +1,17 @@
+vulnerability:
+  name:
+    pt-br: S3 Bucket Takeover
+    en: S3 Bucket Takeover
+    es: S3 Bucket Takeover
+  type: cloud, network
+  category: Misconfig
+  description:
+    pt-br: O S3 (Simple Storage Service) é um serviço de armazenamento de objetos que permite armazenar, recuperar e gerenciar arquivos e dados em uma infraestrutura de armazenamento altamente disponível e durável. A vulnerabilidade de S3 Bucket Takeover ocorre quando um bucket é mal configurado, permitindo que agentes maliciosos assumam o controle total do serviço. Isso comumente acontece quando o nome de um bucket está associado a uma entrada DNS, mas o bucket em si não foi criado ou foi deletado. Nessa situação, um atacante pode criar um bucket com o mesmo nome referenciado pelo registro DNS, obtendo acesso total ao tráfego direcionado ao bucket original. O agente malicioso pode até utilizá-lo para distribuição de malware e campanhas de phishing, colocando em risco a privacidade, integridade e confidencialidade de colaboradores e usuários.
+    en: S3 (Simple Storage Service) is an object storage service that allows you to store, retrieve, and manage files and data in a highly available and durable storage infrastructure. The S3 Bucket Takeover vulnerability occurs when a bucket is misconfigured, allowing malicious agents to take full control of the service. This commonly happens when the name of a bucket is associated with a DNS entry, but the bucket itself has not been created or has been deleted. In this situation, an attacker can create a bucket with the same name referenced by the DNS record, gaining full access to the traffic directed to the original bucket. The malicious agent can even use it for the distribution of malware and phishing campaigns, jeopardizing the privacy, integrity, and confidentiality of collaborators and users.
+    es: S3 (Simple Storage Service) es un servicio de almacenamiento de objetos que permite almacenar, recuperar y gestionar archivos y datos en una infraestructura de almacenamiento altamente disponible y duradera. La vulnerabilidad de S3 Bucket Takeover ocurre cuando un bucket está mal configurado, permitiendo que agentes maliciosos asuman el control total del servicio. Esto sucede comúnmente cuando el nombre de un bucket está asociado a una entrada DNS, pero el bucket en sí no ha sido creado o ha sido eliminado. En esta situación, un atacante puede crear un bucket con el mismo nombre referenciado por el registro DNS, obteniendo acceso total al tráfico dirigido al bucket original. El agente malicioso puede incluso utilizarlo para la distribución de malware y campañas de phishing, poniendo en riesgo la privacidad, integridad y confidencialidad de colaboradores y usuarios.
+  recommendation:
+    pt-br: Deve ser removido o registro DNS de entrada já que o mesmo não tem nenhuma utilização no momento.
+    en: The DNS entry record should be removed since it has no use at the moment.
+    es: El registro de entrada DNS debe ser eliminado ya que no tiene uso en este momento.
+  references:
+    - https://socradar.io/aws-s3-bucket-takeover-vulnerability-risks-consequences-and-detection/
