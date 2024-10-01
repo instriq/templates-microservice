@@ -1,0 +1,23 @@
+vulnerability:
+  name:
+    pt-br: Registro de integridade desativado
+    en: Log integrity disabled
+    es: Registro de integridad desactivado
+  type: cloud
+  category: Other
+  description:
+    pt-br: A aplicação não implementa medidas para garantir a integridade dos registros, permitindo que usuários maliciosos alterem ou excluam entradas de log, o que pode dificultar a investigação de incidentes.
+    en: The application does not implement measures to ensure the integrity of logs, allowing malicious users to alter or delete log entries, which can hinder incident investigation.
+    es: La aplicación no implementa medidas para garantizar la integridad de los registros, lo que permite a los usuarios maliciosos alterar o eliminar entradas de registro, lo que puede dificultar la investigación de incidentes.
+  recommendation:
+    pt-br: |
+      Para corrigir essa vulnerabilidade, recomenda-se a implementação de mecanismos de verificação de integridade, como a utilização de hashes criptográficos ou assinaturas digitais para garantir que os registros não possam ser alterados sem detecção.
+      Além disso, é importante realizar auditorias regulares dos logs para identificar e responder a qualquer alteração não autorizada.
+    en: |
+      To fix this vulnerability, it is recommended to implement integrity verification mechanisms, such as using cryptographic hashes or digital signatures to ensure that logs cannot be altered without detection.
+      Additionally, it is important to conduct regular audits of the logs to identify and respond to any unauthorized changes.
+    es: |
+      Para corregir esta vulnerabilidad, se recomienda implementar mecanismos de verificación de integridad, como el uso de hashes criptográficos o firmas digitales para garantizar que los registros no puedan ser alterados sin detección.
+      Además, es importante realizar auditorías regulares de los registros para identificar y responder a cualquier cambio no autorizado.
+  references:
+    - https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html
