@@ -10,7 +10,7 @@ vulnerability:
     en: User enumeration is possible. This increases the attack surface, allowing malicious agents to identify and target specific users for direct attacks or exploitation of vulnerabilities in the application.
     es: Es posible realizar la enumeración de usuarios. Esto amplía la superficie de ataque, permitiendo que agentes maliciosos identifiquen y apunten a usuarios específicos para ataques directos o explotación de vulnerabilidades en la aplicación.
   recommendation:
-    pt-br: Limite a exposição de informações de usuários em interfaces públicas, forneça mensagens de erro genéricas e utilize recursos para restrição de tentativas de login, como: CAPTCHA e rate-limiting.
+    pt-br: Limite a exposição de informações de usuários em interfaces públicas, forneça mensagens de erro genéricas e utilize recursos para restrição de tentativas de login, como CAPTCHA e rate-limiting.
     en: Limit the exposure of user information on public interfaces, provide generic error messages, and use measures to restrict login attempts, such as CAPTCHA and rate-limiting.
     es: Limite la exposición de la información de los usuarios en interfaces públicas, proporcione mensajes de error genéricos y utilice medidas para restringir los intentos de inicio de sesión, como CAPTCHA y limitación de tasa.
   references:
