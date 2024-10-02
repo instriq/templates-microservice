@@ -1,35 +1,35 @@
 index:
-    - 1: app-disclosure-erros
-    - 2: comments-on-the-source-code
-    - 3: subdomain-takeover
-    - 4: waf-bypass
-    - 5: exposure-sensitive-info
-    - 6: insecure-http-communication
-    - 7: user-enumeration
-    - 8: no-rate-limit
-    - 9: debugging-mode-enabled
-    - 10: lack-certificate-pinning
-    - 11: use-of-default-credential
-    - 12: service-with-known-vulns
-    - 13: exposure-of-sensitive-service
-    - 14: insecure-app-permissions
-    - 15: root-verification
-    - 16: s3-without-criptography
-    - 17: security-group-without-use
-    - 18: ec2-ebs-without-crypto
-    - 19: security-group-allow-sensitive-traffic
-    - 20: load-balancer-allow-http
-    - 21: minimum-password-length
-    - 22: log-file-validation-disabled
-    - 23: staging-services-exposed
-    - 24: users-without-mfa
-    - 25: log-integrity-disabled
-    - 26: password-policy-reuse
-    - 27: s3-without-backup
-    - 28: ebs-without-encryption-on-snapshot
-    - 29: hardcoded-info-in-lambda
-    - 30: s3-with-listining
-    - 31: iam-group-without-users
-    - 32: s3-bucket-takeover
-    - 33: php-info-disclosure
-    - 34: unrestricted-file-upload
+    0: app-disclosure-erros
+    1: comments-on-the-source-code
+    2: subdomain-takeover
+    3: waf-bypass
+    4: exposure-sensitive-info
+    5: insecure-http-communication
+    6: user-enumeration
+    7: no-rate-limit
+    8: debugging-mode-enabled
+    9: lack-certificate-pinning
+    10: use-of-default-credential
+    11: service-with-known-vulns
+    12: exposure-of-sensitive-service
+    13: insecure-app-permissions
+    14: root-verification
+    15: s3-without-criptography
+    16: security-group-without-use
+    17: ec2-ebs-without-crypto
+    18: security-group-allow-sensitive-traffic
+    19: load-balancer-allow-http
+    20: minimum-password-length
+    21: log-file-validation-disabled
+    22: staging-services-exposed
+    23: users-without-mfa
+    24: log-integrity-disabled
+    25: password-policy-reuse
+    26: s3-without-backup
+    27: ebs-without-encryption-on-snapshot
+    28: hardcoded-info-in-lambda
+    29: s3-with-listining
+    30: iam-group-without-users
+    31: s3-bucket-takeover
+    32: php-info-disclosure
+    33: unrestricted-file-upload
