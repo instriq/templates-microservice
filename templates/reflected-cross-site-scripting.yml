@@ -1,0 +1,43 @@
+vulnerability:
+  name:
+    pt-br: Cross-site Scripting refletido (XSS Refletido)
+    en: Reflected Cross-Site Scripting (Reflected XSS)
+    es: Cross-site Scripting reflejado (XSS Reflejado)
+  type: web
+  category: Injection
+  description:
+    pt-br: |
+      Vulnerabilidade Cross-Site Scripting (XSS) detectada.
+      Uma vulnerabilidade de Cross-Site Scripting (XSS) ocorre quando um atacante consegue injetar código malicioso em uma página web visualizada por outros usuários.
+      Esse código pode roubar informações sensíveis, como cookies e dados de login, ou até realizar ações em nome do usuário, comprometendo a segurança e privacidade da aplicação.
+      A vulnerabilidade de Cross-site Scripting Refletido (Reflected XSS) é um tipo específico de XSS em que o código malicioso é enviado ao servidor como parte de uma solicitação (por exemplo, através de um parâmetro na URL) e refletido imediatamente na resposta.
+      Esse ataque pode ocorrer em formulários, URLs ou qualquer entrada de dados que não seja devidamente sanitizada.      
+    en: |
+      Cross-site Scripting (XSS) vulnerability detected.
+      A Cross-site Scripting (XSS) vulnerability occurs when an attacker is able to inject malicious code into a web page viewed by other users.
+      This code can steal sensitive information, such as cookies and login data, or even perform actions on behalf of the user, compromising the application's security and privacy.
+      A Reflected Cross-site Scripting (Reflected XSS) vulnerability is a specific type of XSS where the malicious code is sent to the server as part of a request (for example, through a URL parameter) and is immediately reflected in the response.
+      This attack can occur in forms, URLs, or any data input that is not properly sanitized.
+    es: |
+      Vulnerabilidad de Cross-site Scripting (XSS) detectada.
+      Una vulnerabilidad de Cross-site Scripting (XSS) ocurre cuando un atacante logra inyectar código malicioso en una página web que es vista por otros usuarios.
+      Este código puede robar información sensible, como cookies y datos de inicio de sesión, o incluso realizar acciones en nombre del usuario, comprometiendo la seguridad y privacidad de la aplicación.
+      Una vulnerabilidad de Cross-site Scripting Reflejado (Reflected XSS) es un tipo específico de XSS en el que el código malicioso se envía al servidor como parte de una solicitud (por ejemplo, a través de un parámetro en la URL) y se refleja inmediatamente en la respuesta.
+      Este ataque puede ocurrir en formularios, URLs o cualquier entrada de datos que no haya sido debidamente sanitizada.
+  recommendation:
+    pt-br: |
+      Para mitigar essa vulnerabilidade, as seguintes práticas são recomendadas:
+      1. Validação e Sanitização de Entrada: Sempre valide e sanitize as entradas do usuário para garantir que dados maliciosos não possam ser injetados. Utilize bibliotecas robustas de validação e filtros para limpar as entradas de dados.
+      2. Escapamento de Saída: Escape todos os dados que serão inseridos em páginas HTML, atributos HTML, JavaScript, CSS ou URLs para evitar a execução de código malicioso. Use funções de escapamento apropriadas conforme o contexto.  
+    en: |
+      To mitigate this vulnerability, the following practices are recommended:
+      1. Input Validation and Sanitization: Always validate and sanitize user input to ensure that malicious data cannot be injected. Use robust validation libraries and filters to clean input data.
+      2. Output Escaping: Escape all data that will be inserted into HTML pages, HTML attributes, JavaScript, CSS, or URLs to prevent the execution of malicious code. Use appropriate escaping functions according to the context.
+    es: |
+      Para mitigar esta vulnerabilidad, se recomiendan las siguientes prácticas:
+      1. Validación y Sanitización de Entradas: Siempre valide y sanee las entradas de los usuarios para asegurarse de que no se puedan inyectar datos maliciosos. Utilice bibliotecas de validación y filtros robustos para limpiar los datos de entrada.
+      2. Escape de Salida: Escape todos los datos que se insertarán en las páginas HTML, atributos HTML, JavaScript, CSS o URLs para evitar la ejecución de código malicioso. Use funciones de escape apropiadas según el contexto.
+  references:
+    - https://owasp.org/www-community/attacks/xss/
+    - https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
+    - https://owasp.org/www-project-top-ten/2017/A7_2017-Cross-Site_Scripting_(XSS)

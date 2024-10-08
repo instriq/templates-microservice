@@ -33,3 +33,4 @@ index:
     31: s3-bucket-takeover
     32: php-info-disclosure
     33: unrestricted-file-upload
+    34: reflected-cross-site-scripting
