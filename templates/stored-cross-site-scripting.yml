@@ -1,0 +1,40 @@
+vulnerability:
+  name:
+    pt-br: Cross-site Scripting armazenado (XSS Armazenado)
+    en: Stored Cross-Site Scripting (Stored XSS)
+    es: Cross-site Scripting almacenado (XSS Almacenado)
+  type: web
+  category: Injection
+  description:
+    pt-br: |
+      Uma vulnerabilidade de Cross-Site Scripting (XSS) ocorre quando um atacante injeta código malicioso em uma página web, que é executado no navegador da vítima.
+      Esse código pode roubar informações sensíveis, como cookies e dados de login, ou realizar ações em nome do usuário, comprometendo a segurança do serviço.
+      O Stored XSS ou XSS Armazenado é um tipo de XSS em que o código malicioso injetado é armazenado permanentemente nos servidores de destino, como em um banco de dados, fórum de mensagens, registro de visitantes, campos de comentários, etc. Esse tipo de XSS é particularmente perigoso, pois o código malicioso armazenado de forma persistente pode atingir um grande número de usuários que acessam a página ou o recurso afetado.
+      Exemplo: imagine que um site permite que os usuários postem comentários em artigos. Um atacante pode inserir um comentário malicioso, como <script>alert('XSS Armazenado')</script>. Se o site não validar e sanitizar o conteúdo do comentário antes de armazená-lo, o código será salvo no banco de dados. Sempre que um usuário visitar essa página, o código será executado no navegador da vítima, permitindo ao atacante roubar cookies ou executar outras ações maliciosas.
+    en: |
+      A Cross-Site Scripting (XSS) vulnerability occurs when an attacker injects malicious code into a web page, which is executed in the victim's browser.
+      This code can steal sensitive information, such as cookies and login data, or perform actions on behalf of the user, compromising the security of the service.
+      Stored XSS, or Persistent XSS, is a type of XSS where the injected malicious code is permanently stored on the target servers, such as in a database, message forum, visitor log, comment fields, etc. This type of XSS is particularly dangerous because the malicious code, stored persistently, can affect a large number of users who access the affected page or resource.
+      Example: imagine a website that allows users to post comments on articles. An attacker could insert a malicious comment, such as <script>alert('Stored XSS')</script>. If the site does not validate and sanitize the comment content before storing it, the code will be saved in the database. Every time a user visits that page, the code will be executed in the victim's browser, allowing the attacker to steal cookies or perform other malicious actions.
+    es: |
+      Una vulnerabilidad de Cross-Site Scripting (XSS) ocurre cuando un atacante inyecta código malicioso en una página web, que se ejecuta en el navegador de la víctima.
+      Este código puede robar información sensible, como cookies y datos de inicio de sesión, o realizar acciones en nombre del usuario, comprometiendo la seguridad del servicio.
+      El Stored XSS, o XSS Persistente, es un tipo de XSS donde el código malicioso inyectado se almacena permanentemente en los servidores de destino, como en una base de datos, foro de mensajes, registro de visitantes, campos de comentarios, etc. Este tipo de XSS es particularmente peligroso, ya que el código malicioso almacenado de forma persistente puede afectar a un gran número de usuarios que acceden a la página o recurso afectado.
+      Ejemplo: imagina que un sitio permite que los usuarios publiquen comentarios en artículos. Un atacante podría insertar un comentario malicioso, como <script>alert('XSS Almacenado')</script>. Si el sitio no valida ni sanea el contenido del comentario antes de almacenarlo, el código se guardará en la base de datos. Cada vez que un usuario visite esa página, el código se ejecutará en el navegador de la víctima, lo que permitirá al atacante robar cookies o realizar otras acciones maliciosas.
+  recommendation:
+    pt-br: |
+      Para mitigar essa vulnerabilidade, as seguintes práticas são recomendadas:
+      1. validação e sanitização de entrada: sempre valide e sanitize as entradas do usuário para garantir que dados maliciosos não possam ser injetados. Utilize bibliotecas robustas de validação e filtros para limpar as entradas de dados.
+      2. escapamento de saída: escape todos os dados que serão inseridos em páginas HTML, atributos HTML, JavaScript, CSS ou URLs para evitar a execução de código malicioso. Use funções de escapamento apropriadas conforme o contexto.  
+    en: |
+      To mitigate this vulnerability, the following practices are recommended:
+      1. input validation and Sanitization: always validate and sanitize user input to ensure that malicious data cannot be injected. Use robust validation libraries and filters to clean input data.
+      2. output escaping: escape all data that will be inserted into HTML pages, HTML attributes, JavaScript, CSS, or URLs to prevent the execution of malicious code. Use appropriate escaping functions according to the context.
+    es: |
+      Para mitigar esta vulnerabilidad, se recomiendan las siguientes prácticas:
+      1. validación y sanitización de entradas: siempre valide y sanee las entradas de los usuarios para asegurarse de que no se puedan inyectar datos maliciosos. Utilice bibliotecas de validación y filtros robustos para limpiar los datos de entrada.
+      2. escape de salida: escape todos los datos que se insertarán en las páginas HTML, atributos HTML, JavaScript, CSS o URLs para evitar la ejecución de código malicioso. Use funciones de escape apropiadas según el contexto.
+  references:
+    - https://owasp.org/www-community/attacks/xss/
+    - https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
+    - https://owasp.org/www-project-top-ten/2017/A7_2017-Cross-Site_Scripting_(XSS)
