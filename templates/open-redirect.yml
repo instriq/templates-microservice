@@ -1,0 +1,56 @@
+vulnerability:
+  name:
+    pt-br: Redirecionamento Aberto
+    en: Open Redirect
+    es: Redireccionamiento Abierto
+  type: web
+  category: Other
+  description:
+    pt-br: |
+      Open Redirect é uma vulnerabilidade de segurança que ocorre quando um aplicativo da web redireciona um usuário para um destino externo com base em um parâmetro fornecido na URL, sem validação ou verificação adequada.
+      Essa falha pode ser explorada por atacantes para redirecionar usuários a sites maliciosos, páginas de phishing ou outros destinos mal-intencionados.
+      A exploração geralmente envolve a manipulação do parâmetro de redirecionamento na URL.
+      Se o aplicativo não validar corretamente esse parâmetro, um atacante pode fornecer um URL malicioso, fazendo com que o usuário acredite estar sendo redirecionado para um site legítimo, quando na verdade está sendo conduzido a um domínio controlado pelo atacante.
+      Essa vulnerabilidade é especialmente perigosa por facilitar ataques de phishing, onde os usuários são enganados para revelar informações sensíveis.
+    en: |
+      Open Redirect is a security vulnerability that occurs when a web application redirects a user to an external destination based on a URL parameter without proper validation or verification.
+      This flaw can be exploited by attackers to redirect users to malicious websites, phishing pages, or other malicious locations.
+      Exploitation typically involves manipulating the redirection parameter in the URL.
+      If the application does not properly validate this parameter, an attacker can supply a malicious URL, tricking the user into believing they are being redirected to a legitimate site, while in reality being taken to an attacker-controlled domain.
+      This vulnerability is particularly dangerous as it enables phishing attacks, where users are deceived into disclosing sensitive information.
+    es: |
+      Open Redirect es una vulnerabilidad de seguridad que ocurre cuando una aplicación web redirige a un usuario a un destino externo basado en un parámetro de URL sin validación o verificación adecuada.
+      Esta falla puede ser explotada por atacantes para redirigir a los usuarios a sitios maliciosos, páginas de phishing u otros destinos malintencionados.
+      La explotación generalmente implica la manipulación del parámetro de redirección en la URL.
+      Si la aplicación no valida correctamente este parámetro, un atacante puede proporcionar una URL maliciosa, haciendo que el usuario crea que está siendo redirigido a un sitio legítimo, cuando en realidad está siendo llevado a un dominio controlado por el atacante.
+      Esta vulnerabilidad es particularmente peligrosa porque facilita ataques de phishing, donde los usuarios son engañados para divulgar información sensible.
+  recommendation:
+    pt-br: |
+      Para mitigar vulnerabilidades de redirecionamento aberto, os desenvolvedores devem garantir que entradas controladas pelo usuário não sejam usadas diretamente para redirecionamentos. Considere as seguintes estratégias:
+
+      - **Evite entradas diretas do usuário em redirecionamentos**: Substitua a funcionalidade por links diretos ou mantenha uma lista no servidor de URLs permitidas para redirecionamento. Passe um índice ou identificador em vez de uma URL completa.
+      - **Valide a entrada do usuário**: Use mecanismos estritos de validação para qualquer entrada de redirecionamento. Permita apenas URLs relativas ou URLs que correspondam a padrões pré-definidos de domínios confiáveis.
+      - **Empregue URLs relativas**: Limite os redirecionamentos ao domínio da aplicação usando caminhos relativos e validando as entradas. Preceda caminhos relativos com um domínio confiável antes de processar os redirecionamentos.
+      - **Implemente etapas intermediárias**: Redirecione os usuários para uma página de aviso antes de navegar para fora do site, informando explicitamente sobre a saída do domínio confiável.
+      - **Use um nonce ou token**: Requeira um nonce único e imprevisível na solicitação de redirecionamento para garantir que ela se originou de uma interação legítima do usuário.
+    en: |
+      To mitigate open redirection vulnerabilities, developers should ensure user-controlled input is not directly used for redirection. Consider the following strategies:
+
+      - **Avoid direct user input in redirections**: Replace the functionality with direct links or maintain a server-side list of permissible redirection URLs. Pass an index or identifier instead of the complete URL.
+      - **Validate user input**: Use strict validation mechanisms for any redirection inputs. Only allow relative URLs or URLs that match pre-defined patterns corresponding to trusted domains.
+      - **Employ relative URLs**: Ensure redirects are limited to the application domain by using relative paths and validating inputs. Prepend a trusted domain to relative paths before processing redirects.
+      - **Implement intermediary steps**: Redirect users to a disclaimer page before navigating away from the site, warning them explicitly about leaving the trusted domain.
+      - **Use a nonce or token**: Require a unique, unpredictable nonce in the redirection request to ensure it originated from a legitimate user interaction.
+    es: |
+      Para mitigar vulnerabilidades de redireccionamiento abierto, los desarrolladores deben garantizar que las entradas controladas por los usuarios no se utilicen directamente para redireccionamientos. Considere las siguientes estrategias:
+
+      - **Evite entradas directas de los usuarios en redireccionamientos**: Reemplace la funcionalidad con enlaces directos o mantenga una lista en el servidor de URLs permisibles para redireccionamiento. Pase un índice o identificador en lugar de una URL completa.
+      - **Valide la entrada del usuario**: Utilice mecanismos estrictos de validación para cualquier entrada de redireccionamiento. Permita solo URLs relativas o URLs que coincidan con patrones predefinidos correspondientes a dominios confiables.
+      - **Emplee URLs relativas**: Asegúrese de que los redireccionamientos se limiten al dominio de la aplicación utilizando rutas relativas y validando las entradas. Agregue un dominio confiable a las rutas relativas antes de procesar los redireccionamientos.
+      - **Implemente pasos intermedios**: Redirija a los usuarios a una página de advertencia antes de navegar fuera del sitio, advirtiéndoles explícitamente sobre la salida del dominio confiable.
+      - **Use un nonce o token**: Requiera un nonce único e impredecible en la solicitud de redireccionamiento para garantizar que se originó de una interacción legítima del usuario.
+  references:
+    - https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html
+    - https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/11-Client_Side_Testing/04-Testing_for_Client_Side_URL_Redirect
+    - https://portswigger.net/kb/issues/00500100_open-redirection-reflected
+    - https://cwe.mitre.org/data/definitions/601.html
