@@ -15,3 +15,4 @@ vulnerability:
     es: El registro de entrada DNS debe ser eliminado ya que no tiene uso en este momento.
   references:
     - https://socradar.io/aws-s3-bucket-takeover-vulnerability-risks-consequences-and-detection/
+    - https://satyasai1460.medium.com/amazon-s3-bucket-takeover-648ed9561ee7
