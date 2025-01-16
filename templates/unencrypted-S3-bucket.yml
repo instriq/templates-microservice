@@ -32,29 +32,23 @@ vulnerability:
       El uso de SSE es altamente recomendado al almacenar datos sensibles o confidenciales en Amazon S3. Proporciona una capa adicional de seguridad para proteger sus datos contra el acceso no autorizado, incluso si alguien obtiene acceso físico a los servidores S3. Además, el uso de SSE puede ayudar a cumplir con los requisitos de conformidad con las regulaciones de seguridad.
   recommendation:
     pt-br: |
-      Você pode usar a AWS CLI para configurar o SSE em um bucket S3. Aqui estão alguns exemplos de comandos: 
-      Para habilitar a criptografia SSE-S3 (gerenciada pelo S3) em um bucket:
+      Para mitigar esta vulnerabilidade, habilite a criptografia SSE nos buckets afetados. Abaixo está um exemplo de comando para habilitar a criptografia SSE-S3 usando a AWS CLI:
       ```sh
       aws s3api put-bucket-encryption --bucket NOME_DO_BUCKET --server-side-encryption-configuration '{ "Rules": [{ "ApplyServerSideEncryptionByDefault": { "SSEAlgorithm": "AES256" } }] }'
       ```
-      Após a execução do comando, a criptografia do lado do servidor estará ativada para o bucket especificado.
-      Certifique-se de que sua conta AWS tenha as permissões adequadas para realizar essas operações no bucket em questão.
+      Após a execução do comando, a criptografia será aplicada automaticamente para novos objetos armazenados no bucket. Certifique-se de revisar as permissões da sua conta AWS para realizar esta operação.
     en: |
-      You can use the AWS CLI to configure SSE on an S3 bucket. Here are some command examples:
-      To enable SSE-S3 (managed by S3) encryption on a bucket:
+      To mitigate this vulnerability, enable SSE encryption on the affected buckets. Below is an example command to enable SSE-S3 encryption using the AWS CLI:
       ```sh
       aws s3api put-bucket-encryption --bucket BUCKET_NAME --server-side-encryption-configuration '{ "Rules": [{ "ApplyServerSideEncryptionByDefault": { "SSEAlgorithm": "AES256" } }] }'
       ```
-      After running the command, server-side encryption will be enabled for the specified bucket.
-      Ensure your AWS account has the appropriate permissions to perform these operations on the target bucket.
+      After running the command, encryption will automatically be applied to new objects stored in the bucket. Make sure to review your AWS account permissions to perform this operation.
     es: |
-      Puede utilizar la AWS CLI para configurar SSE en un bucket S3. Aquí hay algunos ejemplos de comandos:
-      Para habilitar la encriptación SSE-S3 (gestionada por S3) en un bucket:
+      Para mitigar esta vulnerabilidad, habilite la encriptación SSE en los buckets afectados. A continuación, se muestra un ejemplo de comando para habilitar la encriptación SSE-S3 utilizando la AWS CLI:
       ```sh
       aws s3api put-bucket-encryption --bucket NOMBRE_DEL_BUCKET --server-side-encryption-configuration '{ "Rules": [{ "ApplyServerSideEncryptionByDefault": { "SSEAlgorithm": "AES256" } }] }'
       ```
-      Después de ejecutar el comando, la encriptación del lado del servidor estará habilitada para el bucket especificado.
-      Asegúrese de que su cuenta de AWS tenga los permisos adecuados para realizar estas operaciones en el bucket correspondiente.
+      Después de ejecutar el comando, la encriptación se aplicará automáticamente a los nuevos objetos almacenados en el bucket. Asegúrese de revisar los permisos de su cuenta de AWS para realizar esta operación.
   references:
     - https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html
     - https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/S3/bucket-default-encryption.html
