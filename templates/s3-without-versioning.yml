@@ -1,0 +1,41 @@
+vulnerability:
+  name:
+    pt-br: "S3 Buckets sem versionamento"
+    en: "S3 Buckets without Versioning"
+    es: "Buckets S3 sin Versionado"
+  type: cloud
+  category: Other
+  description:
+    pt-br: |
+      O Amazon S3 (Simple Storage Service) oferece uma funcionalidade de versioning (versionamento), que permite que múltiplas versões de um objeto sejam mantidas em um bucket. Isso é crucial para garantir a integridade dos dados e proteger contra exclusões acidentais, alterações não autorizadas ou corrupção de arquivos. Quando o versionamento está desativado, o S3 não mantém versões anteriores dos objetos, o que pode levar à perda irreversível de dados em caso de erros operacionais ou falhas de segurança.
+    en: |
+      Amazon S3 (Simple Storage Service) offers a versioning feature that allows multiple versions of an object to be retained in a bucket. This is crucial for ensuring data integrity and protecting against accidental deletions, unauthorized changes, or file corruption. When versioning is disabled, S3 does not retain previous versions of objects, which can result in irreversible data loss in cases of operational errors or security failures.
+    es: |
+      Amazon S3 (Simple Storage Service) ofrece una funcionalidad de versionado que permite mantener múltiples versiones de un objeto en un bucket. Esto es crucial para garantizar la integridad de los datos y proteger contra eliminaciones accidentales, cambios no autorizados o corrupción de archivos. Cuando el versionado está desactivado, S3 no conserva versiones anteriores de los objetos, lo que puede resultar en una pérdida de datos irreversible en casos de errores operativos o fallos de seguridad.
+  recommendation:
+    pt-br: |
+      Para mitigar os riscos associados à ausência de versionamento nos buckets S3, recomendamos:
+      - Ativar o versionamento em todos os buckets S3, seja no nível do bucket ou por meio de uma política de bucket.
+      - Configurar políticas de ciclo de vida do versionamento para arquivar ou excluir automaticamente versões mais antigas dos objetos com base nos seus requisitos de retenção de dados.
+      - Ativar a exclusão com MFA em buckets S3 versionados para evitar exclusões acidentais ou não autorizadas de buckets e versões de objetos.
+      - Ativar o AWS CloudTrail para registrar todas as operações de nível de bucket e objeto do S3, incluindo alterações de versionamento.
+      - Implementar regras do AWS Config para monitorar continuamente e alertar sobre buckets S3 com versionamento desativado.
+    en: |
+      To mitigate risks associated with the lack of versioning in S3 buckets, we recommend:
+      - Enabling versioning on all S3 buckets, either at the bucket level or through a bucket policy.
+      - Configuring versioning lifecycle policies to automatically archive or delete older object versions based on your data retention requirements.
+      - Enabling MFA delete on versioned S3 buckets to prevent accidental or unauthorized deletions of buckets and object versions.
+      - Activating AWS CloudTrail to log all S3 bucket and object-level operations, including versioning changes.
+      - Implementing AWS Config rules to continuously monitor and alert on S3 buckets with versioning disabled.
+    es: |
+      Para mitigar los riesgos asociados con la falta de versionado en los buckets S3, recomendamos:
+      - Habilitar el versionado en todos los buckets S3, ya sea a nivel del bucket o mediante una política de bucket.
+      - Configurar políticas de ciclo de vida de versionado para archivar o eliminar automáticamente versiones más antiguas de objetos según los requisitos de retención de datos.
+      - Activar la eliminación con MFA en buckets S3 versionados para evitar eliminaciones accidentales o no autorizadas de buckets y versiones de objetos.
+      - Activar AWS CloudTrail para registrar todas las operaciones a nivel de bucket y objeto del S3, incluidas las modificaciones de versionado.
+      - Implementar reglas de AWS Config para monitorear continuamente y alertar sobre buckets S3 con el versionado desactivado.
+  references:
+    - https://docs.aws.amazon.com/AmazonS3/latest/userguide/Versioning.html
+    - https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-versioning-enabled.html
+    - https://docs.aws.amazon.com/AmazonS3/latest/userguide/cloudtrail-logging.html
+    - https://security.snyk.io/rules/cloud/SNYK-CC-00023
