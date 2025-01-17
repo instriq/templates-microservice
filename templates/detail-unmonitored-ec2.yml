@@ -1,0 +1,44 @@
+vulnerability:
+  name:
+    pt-br: "Instâncias EC2 sem monitoramento detalhado"
+    en: "EC2 Instances Without Detailed Monitoring"
+    es: "Instancias EC2 sin Monitoreo Detallado"
+  type: cloud
+  category: Other
+  description:
+    pt-br: |
+      O Amazon EC2 (Elastic Compute Cloud) é um serviço que fornece capacidade de computação escalável na nuvem. O monitoramento detalhado é um recurso opcional no Amazon EC2 que fornece métricas e dados mais granulares sobre o desempenho e a saúde de suas instâncias EC2. Quando o monitoramento detalhado está habilitado, o Amazon CloudWatch coleta dados da instância com uma frequência de 1 minuto, oferecendo insights mais detalhados em comparação com a frequência padrão de 5 minutos.
+
+      Com o monitoramento detalhado desabilitado, a visibilidade e o monitoramento dessas instâncias EC2 são reduzidos, tornando mais difícil detectar e responder a problemas de desempenho, incidentes de segurança ou outras anomalias.
+    en: |
+      Amazon EC2 (Elastic Compute Cloud) is a service that provides scalable computing capacity in the cloud. Detailed monitoring is an optional feature in Amazon EC2 that provides more granular metrics and data about the performance and health of your EC2 instances. When detailed monitoring is enabled, Amazon CloudWatch collects instance data at a 1-minute frequency, offering more detailed insights compared to the default 5-minute frequency.
+
+      Without detailed monitoring enabled, visibility into and monitoring of these EC2 instances are reduced, making it harder to detect and respond to performance issues, security incidents, or other anomalies.
+    es: |
+      Amazon EC2 (Elastic Compute Cloud) es un servicio que proporciona capacidad de computación escalable en la nube. El monitoreo detallado es una función opcional en Amazon EC2 que proporciona métricas y datos más detallados sobre el rendimiento y la salud de sus instancias EC2. Cuando el monitoreo detallado está habilitado, Amazon CloudWatch recopila datos de las instancias con una frecuencia de 1 minuto, ofreciendo información más detallada en comparación con la frecuencia predeterminada de 5 minutos.
+
+      Sin el monitoreo detallado habilitado, la visibilidad y el monitoreo de estas instancias EC2 se reducen, lo que dificulta la detección y respuesta a problemas de rendimiento, incidentes de seguridad u otras anomalías.
+  recommendation:
+    pt-br: |
+      Para mitigar os riscos associados a instâncias EC2 com monitoramento detalhado desabilitado recomendamos:
+      - **Habilitar Monitoramento Detalhado**: habilitar o monitoramento detalhado para todas as instâncias EC2, seja individualmente ou por meio de ferramentas de automação e gerenciamento de configuração.
+      - **Certificar-se de que o Monitoramento Detalhado Esteja Habilitado por Padrão**: garantir que o monitoramento detalhado esteja habilitado por padrão para qualquer nova instância EC2 provisionada.
+      - **Implementar Monitoramento e Alertas Automatizados**: usar regras do AWS Config ou outras ferramentas de monitoramento para rastrear continuamente o estado de monitoramento de suas instâncias EC2 e gerar alertas para qualquer instância com monitoramento detalhado desativado.
+      - **Planejamento de Resposta a Incidentes e Recuperação de Desastres**: incorporar dados de monitoramento detalhado em seus procedimentos de resposta a incidentes e recuperação de desastres, pois essas informações podem ser cruciais para uma investigação e recuperação eficazes de incidentes.
+    en: |
+      To mitigate the risks associated with EC2 instances without detailed monitoring enabled, we recommend:
+      - **Enable Detailed Monitoring**: Enable detailed monitoring for all EC2 instances, either individually or through automation and configuration management tools.
+      - **Ensure Detailed Monitoring Is Enabled by Default**: Make sure detailed monitoring is enabled by default for any newly provisioned EC2 instances.
+      - **Implement Automated Monitoring and Alerts**: Use AWS Config rules or other monitoring tools to continuously track the monitoring status of your EC2 instances and generate alerts for any instances with detailed monitoring disabled.
+      - **Plan for Incident Response and Disaster Recovery**: Incorporate detailed monitoring data into your incident response and disaster recovery procedures, as this information can be critical for effective investigation and recovery efforts.
+    es: |
+      Para mitigar los riesgos asociados con las instancias EC2 sin monitoreo detallado habilitado, recomendamos:
+      - **Habilitar Monitoreo Detallado**: Habilitar el monitoreo detallado para todas las instancias EC2, ya sea individualmente o mediante herramientas de automatización y gestión de configuración.
+      - **Asegurar que el Monitoreo Detallado esté Habilitado por Defecto**: Garantizar que el monitoreo detallado esté habilitado por defecto para cualquier nueva instancia EC2 aprovisionada.
+      - **Implementar Monitoreo y Alertas Automatizadas**: Utilizar reglas de AWS Config u otras herramientas de monitoreo para rastrear continuamente el estado de monitoreo de sus instancias EC2 y generar alertas para cualquier instancia con monitoreo detallado deshabilitado.
+      - **Planificar Respuesta a Incidentes y Recuperación ante Desastres**: Incorporar los datos de monitoreo detallado en sus procedimientos de respuesta a incidentes y recuperación ante desastres, ya que esta información puede ser crucial para una investigación y recuperación efectiva.
+  references:
+    - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html
+    - https://docs.aws.amazon.com/config/latest/developerguide/ec2-instance-detailed-monitoring-enabled.html
+    - https://aws.amazon.com/architecture/well-architected/
+    - https://www.tenable.com/policies/cloud-security/AC_AWS_0459
