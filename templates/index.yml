@@ -36,3 +36,6 @@ index:
     34: reflected-cross-site-scripting
     35: stored-cross-site-scripting
     36: open-redirect
+    37: unencrypted-rds-instances
+    38: s3-without-versioning
+    39: unattached-ebs
