@@ -41,4 +41,3 @@ vulnerability:
     - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html
     - https://docs.aws.amazon.com/config/latest/developerguide/ec2-instance-detailed-monitoring-enabled.html
     - https://aws.amazon.com/architecture/well-architected/
-    - https://www.tenable.com/policies/cloud-security/AC_AWS_0459
