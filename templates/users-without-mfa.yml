@@ -6,12 +6,13 @@ vulnerability:
   type: cloud
   category: Other
   description:
-    pt-br: O recurso de autenticação multifator (MFA) não está configurado. Essa medida de segurança adicional exige que usuários forneçam duas ou mais formas de autenticação antes de acessar um recurso ou realizar ações. Esse recurso é essencial para garantir que em caso de credenciais vazadas, o acesso a recursos esteja protegido por mais de um fator.
-    en: The Multi-Factor Authentication (MFA) feature is not configured. This additional security measure requires users to provide two or more forms of authentication before accessing a resource or performing actions. This feature is essential to ensure that in case of credential leakage, access to resources is protected by more than one factor.
-    es: El recurso de autenticación multifactor (MFA) no está configurado. Esta medida de seguridad adicional requiere que los usuarios proporcionen dos o más formas de autenticación antes de acceder a un recurso o realizar acciones. Este recurso es esencial para garantizar que, en caso de filtración de credenciales, el acceso a los recursos esté protegido por más de un factor.
+    pt-br: O recurso de autenticação multifator (MFA) não está configurado. Essa medida de segurança adicional exige que usuários forneçam duas ou mais formas de autenticação antes de acessar um recurso ou realizar ações. Em um cenário onde as credenciais de acesso sejam vazadas, o MFA garante que o acesso aos recursos estará protegido por mais de um fator, dificultando o comprometimento completo da conta.
+    en: The Multi-Factor Authentication (MFA) feature is not configured. This additional security measure requires users to provide two or more forms of authentication before accessing a resource or performing actions. In a scenario where access credentials are leaked, MFA ensures that access to resources is protected by more than one factor, making it harder for attackers to fully compromise the account.
+    es: El recurso de autenticación multifactor (MFA) no está configurado. Esta medida de seguridad adicional requiere que los usuarios proporcionen dos o más formas de autenticación antes de acceder a un recurso o realizar acciones. En un escenario donde se filtren las credenciales de acceso, el MFA garantiza que el acceso a los recursos esté protegido por más de un factor, dificultando el compromiso completo de la cuenta.
   recommendation:
-    pt-br: Exija o uso de MFA em todas as contas de acesso.
-    en: Require the use of MFA on all access accounts.
-    es: Exija el uso de MFA en todas las cuentas de acceso.
+    pt-br: Exija o uso de MFA em todas as contas de acesso, especialmente nas contas administrativas e críticas, para mitigar riscos de segurança. Considere a implementação de MFA também para a autenticação de aplicativos e integrações, a fim de aumentar a proteção.
+    en: Require the use of MFA on all access accounts, especially administrative and critical accounts, to mitigate security risks. Consider implementing MFA for application and integration authentication as well to enhance protection.
+    es: Exija el uso de MFA en todas las cuentas de acceso, especialmente en las cuentas administrativas y críticas, para mitigar riesgos de seguridad. Considere implementar MFA también para la autenticación de aplicaciones e integraciones, con el fin de aumentar la protección.
   references:
     - https://aws.amazon.com/iam/features/mfa/
+    - https://www.csoonline.com/article/3305733/what-is-mfa-multi-factor-authentication-explained.html
