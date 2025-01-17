@@ -38,4 +38,4 @@ index:
     36: open-redirect
     37: unencrypted-rds-instances
     38: s3-without-versioning
-    39: unattached-ebs
+    39: unattached-ebs-volumes
