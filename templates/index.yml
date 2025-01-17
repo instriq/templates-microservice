@@ -15,7 +15,7 @@ index:
     13: insecure-app-permissions
     14: root-verification
     15: s3-without-criptography
-    16: security-group-without-use
+    16: unused-security-groups
     17: ec2-ebs-without-crypto
     18: security-group-allow-sensitive-traffic
     19: load-balancer-allow-http
