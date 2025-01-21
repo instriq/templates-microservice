@@ -1,0 +1,47 @@
+vulnerability:
+  name:
+    pt-br: "Configuração imprópria do HTTPS"
+    en: "Improper HTTPS Configuration"
+    es: "Configuración inadecuada de HTTPS"
+  type: cloud
+  category: Misconfiguration
+  description:
+    pt-br: |
+      A utilização de HTTPS mal configurado e utilização de versões desatualizadas do SSL/TLS representam falhas significativas de criptografia.
+
+      Versões antigas do SSL/TLS possuem vulnerabilidades amplamente divulgadas que tornam possível a quebra da criptografia e vazamento dos dados trafegados no canal de comunicação. Além disso, caso haja a configuração incorreta, é possível que um atacante faça downgrade do SSL, rebaixando a proteção criptográfica oferecida.
+
+      O servidor da aplicação suporta as versões 1.0 e 1.1 do TLS, consideradas desatualizadas e não seguras.
+
+      Por quebrar a criptografia, é possível que haja vazamento de dados sensíveis trafegados entre a aplicação e o usuário. Além da quebra de criptografia, o uso de HTTPS mal configurado pode gerar a outros ataques, como ataques de negação de serviço.
+    en: |
+      The use of misconfigured HTTPS and outdated SSL/TLS versions represents significant cryptographic failures.
+
+      Older versions of SSL/TLS have widely known vulnerabilities that can lead to breaking encryption and leaking data transmitted through the communication channel. Additionally, if incorrectly configured, an attacker could perform SSL downgrade attacks, reducing the cryptographic protection provided.
+
+      The application server supports TLS versions 1.0 and 1.1, which are considered outdated and insecure.
+
+      By breaking encryption, sensitive data transmitted between the application and the user may be exposed. Furthermore, using misconfigured HTTPS can lead to other attacks, such as denial-of-service attacks.
+    es: |
+      El uso de HTTPS mal configurado y versiones obsoletas de SSL/TLS representan fallas criptográficas significativas.
+
+      Las versiones antiguas de SSL/TLS tienen vulnerabilidades ampliamente conocidas que pueden permitir la ruptura de la encriptación y la filtración de datos transmitidos a través del canal de comunicación. Además, si está mal configurado, un atacante podría realizar ataques de degradación de SSL, reduciendo la protección criptográfica ofrecida.
+
+      El servidor de la aplicación admite versiones 1.0 y 1.1 de TLS, consideradas obsoletas e inseguras.
+
+      Al romper la encriptación, los datos sensibles transmitidos entre la aplicación y el usuario pueden estar expuestos. Además, el uso de HTTPS mal configurado puede dar lugar a otros ataques, como ataques de denegación de servicio.
+  recommendation:
+    pt-br: |
+      O servidor da aplicação deve utilizar somente TLS nas versões 1.2 e 1.3, com todas as outras versões desabilitadas, além de aplicar patches em bibliotecas criptográficas, como OpenSSL, que podem possuir vulnerabilidades em versões desatualizadas.
+
+      É importante também que sejam utilizados cabeçalhos de segurança na aplicação, como o HTTP Strict Transport Security (HSTS), além da flag secure nos cookies, que orientam o browser a realizar comunicação com o servidor somente utilizando canais criptografados. Também é necessário desabilitar a renegociação de TLS nas configurações, evitando ataques de negação de serviço por renegociação.
+    en: |
+      The application server should use only TLS versions 1.2 and 1.3, with all other versions disabled, and apply patches to cryptographic libraries like OpenSSL that may have vulnerabilities in outdated versions.
+
+      It is also important to use security headers in the application, such as HTTP Strict Transport Security (HSTS), along with the secure flag on cookies, which instructs the browser to communicate with the server only using encrypted channels. Additionally, TLS renegotiation should be disabled in the settings to prevent denial-of-service attacks through renegotiation.
+    es: |
+      El servidor de la aplicación debe utilizar solo versiones 1.2 y 1.3 de TLS, con todas las demás versiones deshabilitadas, y aplicar parches a las bibliotecas criptográficas, como OpenSSL, que puedan tener vulnerabilidades en versiones obsoletas.
+
+      También es importante utilizar encabezados de seguridad en la aplicación, como HTTP Strict Transport Security (HSTS), junto con la bandera secure en las cookies, que indica al navegador que se comunique con el servidor únicamente mediante canales encriptados. Además, se debe deshabilitar la renegociación de TLS en la configuración para evitar ataques de denegación de servicio a través de renegociación.
+  references:
+    - https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html#server-configuration
