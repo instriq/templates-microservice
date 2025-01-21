@@ -1,0 +1,48 @@
+vulnerability:
+  name:
+    pt-br: Instâncias RDS sem criptografia ativada
+    en: RDS Instances without encryption enabled
+    es: Instancias RDS sin cifrado habilitado
+  type: cloud
+  category: Database
+  description:
+    pt-br: |
+      O Amazon RDS é um serviço de banco de dados totalmente gerenciado que suporta vários mecanismos de banco de dados, como MySQL, PostgreSQL, Oracle e SQL Server. As instâncias RDS podem armazenar dados sensíveis, incluindo informações de clientes, registros financeiros e outros dados críticos para os negócios. Habilitar a criptografia de armazenamento para instâncias RDS é uma medida de segurança crucial para proteger esses dados em repouso.
+
+      Quando a criptografia de armazenamento está desativada, os dados armazenados nos volumes de armazenamento subjacentes da instância RDS não estão criptografados, o que os torna vulneráveis a acessos não autorizados, violações de dados ou outros incidentes de segurança.
+    en: |
+      Amazon RDS is a fully managed database service that supports various database engines such as MySQL, PostgreSQL, Oracle, and SQL Server. RDS instances can store sensitive data, including customer information, financial records, and other critical business data. Enabling storage encryption for RDS instances is a crucial security measure to protect this data at rest.
+
+      When storage encryption is disabled, the data stored on the underlying storage volumes of the RDS instance is unencrypted, making it vulnerable to unauthorized access, data breaches, or other security incidents.
+    es: |
+      Amazon RDS es un servicio de base de datos completamente gestionado que admite varios motores de base de datos, como MySQL, PostgreSQL, Oracle y SQL Server. Las instancias de RDS pueden almacenar datos sensibles, incluida información de clientes, registros financieros y otros datos críticos para el negocio. Habilitar el cifrado de almacenamiento para las instancias de RDS es una medida de seguridad crucial para proteger estos datos en reposo.
+
+      Cuando el cifrado de almacenamiento está deshabilitado, los datos almacenados en los volúmenes de almacenamiento subyacentes de la instancia de RDS no están cifrados, lo que los hace vulnerables al acceso no autorizado, violaciones de datos u otros incidentes de seguridad.
+  recommendation:
+    pt-br: |
+      Para mitigar os riscos associados às instâncias RDS não criptografadas, recomendamos:
+      - Habilitar criptografia de armazenamento para todas as instâncias RDS usando o AWS Key Management Service (KMS).
+      - Garantir que novas instâncias RDS sejam configuradas com criptografia ativada por padrão.
+      - Rotacionar chaves de criptografia regularmente para melhorar a segurança.
+      - Revisar permissões para garantir que apenas usuários autorizados gerenciem configurações de criptografia do RDS.
+      - Monitorar instâncias RDS não criptografadas com regras do AWS Config.
+    en: |
+      To mitigate the risks associated with unencrypted RDS instances, we recommend:
+      - Enabling storage encryption for all RDS instances using AWS Key Management Service (KMS).
+      - Ensuring that new RDS instances are configured with encryption enabled by default.
+      - Regularly rotating encryption keys to enhance security.
+      - Reviewing permissions to ensure that only authorized personnel manage RDS encryption settings.
+      - Monitoring unencrypted RDS instances with AWS Config rules.
+    es: |
+      Para mitigar los riesgos asociados con las instancias de RDS no cifradas, recomendamos:
+      - Habilitar el cifrado de almacenamiento para todas las instancias de RDS utilizando AWS Key Management Service (KMS).
+      - Asegurarse de que las nuevas instancias de RDS estén configuradas con cifrado habilitado por defecto.
+      - Rotar regularmente las claves de cifrado para mejorar la seguridad.
+      - Revisar los permisos para garantizar que solo el personal autorizado gestione las configuraciones de cifrado de RDS.
+      - Monitorizar las instancias de RDS no cifradas con reglas de AWS Config.
+  references:
+    - https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Encryption.html
+    - https://docs.aws.amazon.com/kms/latest/developerguide/services-rds.html
+    - https://docs.aws.amazon.com/config/latest/developerguide/rds-storage-encrypted.html
+    - https://aws.amazon.com/compliance/gdpr-center/
+    - https://docs.aws.amazon.com/securityhub/latest/userguide/rds-controls.html#rds-3
