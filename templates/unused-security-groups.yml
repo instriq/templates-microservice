@@ -1,0 +1,17 @@
+vulnerability:
+  name:
+    pt-br: Security Groups sem uso
+    en: Unused Security Groups
+    es: Grupos de seguridad sin uso
+  type: cloud
+  category: Other
+  description:
+    pt-br: No ambiente de nuvem, os security groups atuam como firewalls virtuais para controlar o tráfego de entrada e saída. A existência de grupos não associados a nenhuma instância ou interface de rede representa uma vulnerabilidade que pode aumentar a superfície de ataque, dificultar o gerenciamento e levar a erros humanos. 
+    en: In the cloud environment, security groups act as virtual firewalls to control inbound and outbound traffic. The presence of groups not associated with any instance or network interface represents a vulnerability that can increase the attack surface, complicate management, and lead to human errors.
+    es: En el entorno de la nube, los grupos de seguridad actúan como firewalls virtuales para controlar el tráfico entrante y saliente. La presencia de grupos no asociados a ninguna instancia o interfaz de red representa una vulnerabilidad que puede aumentar la superficie de ataque, complicar la gestión y provocar errores humanos.
+  recommendation:
+    pt-br: Revisão e exclusão dos security groups sem utilização para melhorar a segurança e a gestão.
+    en: Review and delete unused security groups to improve security and management.
+    es: Revisar y eliminar los grupos de seguridad sin uso para mejorar la seguridad y la gestión.
+  references:
+    - https://docs.aws.amazon.com/vpc/latest/userguide/security-groups.html
