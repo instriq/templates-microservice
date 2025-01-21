@@ -1,0 +1,62 @@
+vulnerability:
+  name:
+    pt-br: "Uso do IMDSv1 em Instâncias EC2"
+    en: "Usage of IMDSv1 in EC2 Instances"
+    es: "Uso de IMDSv1 en Instancias EC2"
+  type: cloud
+  category: Misconfiguration
+  description:
+    pt-br: |
+      O Instance Metadata Service (IMDS) da AWS fornece informações sobre instâncias EC2. O IMDSv1 é vulnerável a ataques de Server-Side Request Forgery (SSRF) devido a suas requisições GET não autenticadas e falta de gerenciamento de sessões. Isso expõe metadados sensíveis, como credenciais de IAM, permitindo que invasores comprometam instâncias EC2 e abusem de recursos da AWS. Incidentes notáveis incluem:
+      - O ataque do UNC2903 em 2021, que utilizou o IMDSv1 para coletar credenciais via SSRF
+      - Uma violação em 2019 que custou mais de $150M devido à exploração do IMDSv1
+      Os caminhos de ataque normalmente envolvem exploração de SSRF -> roubo de credenciais -> movimento lateral -> abuso de recursos AWS. O IMDSv2 mitiga esses riscos com autenticação baseada em tokens e controles de sessão.
+    en: |
+      AWS's Instance Metadata Service (IMDS) provides information about EC2 instances. IMDSv1 is vulnerable to Server-Side Request Forgery (SSRF) attacks due to its unauthenticated GET requests and lack of session management. This exposes sensitive metadata like IAM credentials, enabling attackers to compromise EC2 instances and abuse AWS resources. Notable incidents include:
+      - The 2021 UNC2903 attack using IMDSv1 to harvest credentials via SSRF
+      - A 2019 breach costing $150M+ due to IMDSv1 exploitation
+      Attack paths typically involve SSRF exploitation -> credential theft -> lateral movement -> AWS resource abuse. IMDSv2 mitigates these risks with token-based authentication and session controls.
+    es: |
+      El Instance Metadata Service (IMDS) de AWS proporciona información sobre las instancias EC2. IMDSv1 es vulnerable a ataques de Server-Side Request Forgery (SSRF) debido a sus solicitudes GET no autenticadas y la falta de gestión de sesiones. Esto expone metadatos sensibles como las credenciales de IAM, permitiendo a los atacantes comprometer instancias EC2 y abusar de los recursos de AWS. Algunos incidentes notables incluyen:
+      - El ataque de UNC2903 en 2021, que utilizó IMDSv1 para recolectar credenciales mediante SSRF
+      - Una violación en 2019 que costó más de $150M debido a la explotación de IMDSv1
+      Los caminos de ataque típicos incluyen explotación de SSRF -> robo de credenciales -> movimiento lateral -> abuso de recursos de AWS. IMDSv2 mitiga estos riesgos con autenticación basada en tokens y controles de sesión.
+  recommendation:
+    pt-br: |
+      1. **Exigir o uso do IMDSv2**:
+         - Terraform: Adicione `metadata_options { http_tokens = "required" }` aos recursos EC2
+         - AWS CLI: `aws ec2 modify-instance-metadata-options --instance-id <ID> --http-tokens required`
+         - Use SCPs para bloquear a criação de instâncias com IMDSv1
+      2. **Desativar completamente o IMDS** caso não seja utilizado (verifique se serviços críticos como CloudWatch/SSM não dependem dele)
+      3. **Implemente defesa em profundidade**:
+         - Aplique o princípio de menor privilégio em políticas IAM
+         - Restrinja o acesso ao serviço de metadados via grupos de segurança
+         - Atualize os SDKs/CLIs da AWS para versões compatíveis com o IMDSv2
+         - Considere endpoints VPC e endurecimento da rede
+    en: |
+      1. **Enforce IMDSv2**:
+         - Terraform: Add `metadata_options { http_tokens = "required" }` to EC2 resources
+         - AWS CLI: `aws ec2 modify-instance-metadata-options --instance-id <ID> --http-tokens required`
+         - Use SCPs to block IMDSv1 instance creation
+      2. **Disable IMDS entirely** if unused (verify no critical services like CloudWatch/SSM depend on it)
+      3. **Implement defense-in-depth**:
+         - Apply IAM least privilege principles
+         - Restrict metadata service access via security groups
+         - Update AWS SDKs/CLIs to IMDSv2-compatible versions
+         - Consider VPC endpoints and network hardening
+    es: |
+      1. **Habilitar IMDSv2**:
+         - Terraform: Agregue `metadata_options { http_tokens = "required" }` a los recursos EC2
+         - AWS CLI: `aws ec2 modify-instance-metadata-options --instance-id <ID> --http-tokens required`
+         - Use SCPs para bloquear la creación de instancias con IMDSv1
+      2. **Deshabilite IMDS por completo** si no se utiliza (verifique que no dependan de él servicios críticos como CloudWatch/SSM)
+      3. **Implemente defensa en profundidad**:
+         - Aplique el principio de privilegio mínimo en las políticas de IAM
+         - Restrinja el acceso al servicio de metadatos a través de grupos de seguridad
+         - Actualice los SDKs/CLIs de AWS a versiones compatibles con IMDSv2
+         - Considere endpoints VPC y endurecimiento de la red
+  references:
+    - https://aws.amazon.com/blogs/security/defense-in-depth-open-firewalls-reverse-proxies-ssrf-vulnerabilities-ec2-instance-metadata-service/
+    - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html
+    - https://repost.aws/knowledge-center/ssm-ec2-enforce-imdsv2
+    - https://datadoghq.com/blog/aws-metadata-v1-v2-security/
