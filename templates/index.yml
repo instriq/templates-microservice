@@ -25,16 +25,15 @@ index:
     23: users-without-mfa
     24: log-integrity-disabled
     25: password-policy-reuse
-    26: s3-without-backup
-    27: ebs-without-encryption-on-snapshot
-    28: hardcoded-info-in-lambda
-    29: s3-with-listining
-    30: iam-group-without-users
-    31: s3-bucket-takeover
-    32: php-info-disclosure
-    33: unrestricted-file-upload
-    34: reflected-cross-site-scripting
-    35: stored-cross-site-scripting
-    36: open-redirect
-    37: unencrypted-RDS-instances
-    38: s3-without-versioning
+    26: ebs-without-encryption-on-snapshot
+    27: hardcoded-info-in-lambda
+    28: s3-with-listining
+    29: iam-group-without-users
+    30: s3-bucket-takeover
+    31: php-info-disclosure
+    32: unrestricted-file-upload
+    33: reflected-cross-site-scripting
+    34: stored-cross-site-scripting
+    35: open-redirect
+    36: unencrypted-RDS-instances
+    37: s3-without-versioning
