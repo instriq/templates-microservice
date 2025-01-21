@@ -38,3 +38,4 @@ index:
     36: unencrypted-RDS-instances
     37: s3-without-versioning
     38: ec2-instances-imdsv1
+    39: improper-https-configuration
