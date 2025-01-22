@@ -1,0 +1,52 @@
+vulnerability:
+  name:
+    pt-br: "Instâncias EC2 com imagens AMI datadas"
+    en: "EC2 Instances with Outdated AMIs"
+    es: "Instancias EC2 con AMIs Obsoletas"
+  type: cloud
+  category: Other
+  description:
+    pt-br: |
+      As AMIs (Amazon Machine Images) são a unidade fundamental de implementação para instâncias EC2, pois fornecem o sistema operacional, configurações de aplicativos e outras dependências de software necessárias para executar uma instância EC2. Manter as AMIs atualizadas é crucial para manter a segurança e a estabilidade da infraestrutura EC2.
+
+      Versões mais antigas de AMI podem conter vulnerabilidades conhecidas, falhas de segurança ou carecer de atualizações de software importantes, tornando as instâncias EC2 que as utilizam mais suscetíveis a explorações e incidentes de segurança.
+    en: |
+      Amazon Machine Images (AMIs) are the fundamental deployment units for EC2 instances, providing the operating system, application configurations, and other software dependencies required to run an EC2 instance. Keeping AMIs up to date is critical for maintaining the security and stability of your EC2 infrastructure.
+
+      Dated AMI versions may contain known vulnerabilities, security flaws, or lack essential software updates, making the EC2 instances using them more susceptible to exploitation and security incidents.
+    es: |
+      Las Amazon Machine Images (AMIs) son las unidades fundamentales de implementación para instancias EC2, proporcionando el sistema operativo, configuraciones de aplicaciones y otras dependencias de software necesarias para ejecutar una instancia EC2. Mantener las AMIs actualizadas es fundamental para garantizar la seguridad y estabilidad de la infraestructura EC2.
+
+      Las versiones antiguas de AMIs pueden contener vulnerabilidades conocidas, fallos de seguridad o carecer de actualizaciones de software importantes, lo que hace que las instancias EC2 que las utilizan sean más susceptibles a explotaciones e incidentes de seguridad.
+  recommendation:
+    pt-br: |
+      Para mitigar os riscos associados ao uso de AMIs desatualizadas, recomendamos:
+      - **Atualizar as AMIs**: Substituir as AMIs antigas por versões mais recentes que contenham as atualizações de segurança e desempenho mais recentes.
+      - **Implementar Gerenciamento de Ciclo de Vida de AMIs**: Estabelecer um processo para revisar e atualizar regularmente as versões de AMI usadas pela organização. Definir um cronograma para criar automaticamente novas versões de AMI e depreciar as mais antigas com base em critérios de idade ou vulnerabilidades.
+      - **Habilitar Versionamento e Tagging de AMIs**: Implementar um esquema de versionamento para suas AMIs para facilitar o acompanhamento e gerenciamento de diferentes versões. Utilize tags ou outros metadados para identificar a idade, finalidade e informações associadas de segurança/conformidade de cada versão de AMI.
+      - **Implementar Monitoramento e Alertas**: Usar regras do AWS Config ou outras ferramentas de monitoramento para acompanhar continuamente as versões de AMI usadas por suas instâncias EC2 e gerar alertas para qualquer instância executando AMIs desatualizadas. Configurar alarmes para notificar as equipes apropriadas quando novas versões de AMI estiverem disponíveis ou quando instâncias forem provisionadas com AMIs desatualizadas.
+      - **Considerar Hardening e Verificação de AMIs**: Implementar práticas de hardening de segurança para suas AMIs, como o Benchmark de AMI da CIS. Utilizar ferramentas como o Amazon Inspector para verificar suas AMIs em busca de vulnerabilidades e problemas de configuração.
+    en: |
+      To mitigate the risks associated with using outdated AMIs, we recommend:
+      - **Update AMIs**: Replace outdated AMIs with newer versions that include the latest security and performance updates.
+      - **Implement AMI Lifecycle Management**: Establish a process to regularly review and update the AMI versions used by your organization. Set a schedule to automatically create new AMI versions and deprecate older ones based on age or vulnerabilities.
+      - **Enable AMI Versioning and Tagging**: Implement a versioning scheme for your AMIs to track and manage different versions effectively. Use tags or metadata to identify the age, purpose, and security/compliance details of each AMI version.
+      - **Implement Monitoring and Alerts**: Use AWS Config rules or other monitoring tools to continuously track the AMI versions used by your EC2 instances and generate alerts for any instance running outdated AMIs. Set up alarms to notify appropriate teams when new AMI versions are available or when instances are provisioned with outdated AMIs.
+      - **Consider AMI Hardening and Validation**: Implement security hardening practices for your AMIs, such as the CIS AMI Benchmark. Use tools like Amazon Inspector to scan your AMIs for vulnerabilities and misconfigurations.
+    es: |
+      Para mitigar los riesgos asociados con el uso de AMIs obsoletas, recomendamos:
+      - **Actualizar las AMIs**: Sustituir las AMIs antiguas por versiones más recientes que incluyan las actualizaciones de seguridad y rendimiento más recientes.
+      - **Implementar la Gestión del Ciclo de Vida de las AMIs**: Establecer un proceso para revisar y actualizar periódicamente las versiones de AMI utilizadas por su organización. Definir un cronograma para crear automáticamente nuevas versiones de AMI y descontinuar las más antiguas según criterios de antigüedad o vulnerabilidades.
+      - **Habilitar Versionado y Etiquetado de AMIs**: Implementar un esquema de versionado para sus AMIs para facilitar el seguimiento y la gestión de diferentes versiones. Utilizar etiquetas o metadatos para identificar la antigüedad, propósito e información de seguridad/conformidad de cada versión de AMI.
+      - **Implementar Monitoreo y Alertas**: Utilizar reglas de AWS Config u otras herramientas de monitoreo para rastrear continuamente las versiones de AMI utilizadas por sus instancias EC2 y generar alertas para cualquier instancia que ejecute AMIs obsoletas. Configurar alarmas para notificar a los equipos correspondientes cuando haya disponibles nuevas versiones de AMI o cuando las instancias se aprovisionen con AMIs obsoletas.
+      - **Considerar Endurecimiento y Validación de AMIs**: Implementar prácticas de endurecimiento de seguridad para sus AMIs, como el Benchmark de AMI de CIS. Utilizar herramientas como Amazon Inspector para analizar sus AMIs en busca de vulnerabilidades y problemas de configuración.
+  references:
+    - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html
+    - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
+    - https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-tutorial-update-ami.html
+    - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html
+    - https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html
+    - https://www.cisecurity.org/cis-benchmarks
+    - https://aws.amazon.com/inspector/
+    - https://aws.amazon.com/compliance/gdpr-center/
+    - https://owasp.org/www-project-cloud-native-application-security-top-10/

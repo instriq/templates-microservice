@@ -1,0 +1,40 @@
+vulnerability:
+  name:
+    pt-br: "Volumes EBS não instanciados"
+    en: "Unattached EBS Volumes"
+    es: "Volúmenes EBS no Adjuntos"
+  type: cloud
+  category: Other
+  description:
+    pt-br: |
+      O Elastic Block Store (EBS) da AWS fornece volumes de armazenamento em bloco que podem ser usados com instâncias EC2 para armazenar dados persistentes. Esses volumes podem ser conectados a uma ou mais instâncias EC2, permitindo que dados sejam lidos e gravados conforme necessário. No entanto, volumes EBS não anexados a nenhuma instância podem representar um risco e um desperdício de recursos, já que continuam a incorrer em custos de armazenamento sem estarem efetivamente em uso.
+    en: |
+      AWS Elastic Block Store (EBS) provides block storage volumes that can be used with EC2 instances to store persistent data. These volumes can be attached to one or more EC2 instances, allowing data to be read and written as needed. However, EBS volumes that are unattached to any instance may pose a risk and result in resource wastage, as they continue to incur storage costs without being actively used.
+    es: |
+      AWS Elastic Block Store (EBS) proporciona volúmenes de almacenamiento en bloque que pueden ser utilizados con instancias EC2 para almacenar datos persistentes. Estos volúmenes pueden conectarse a una o más instancias EC2, permitiendo leer y escribir datos según sea necesario. Sin embargo, los volúmenes EBS que no están adjuntos a ninguna instancia pueden representar un riesgo y un desperdicio de recursos, ya que siguen generando costos de almacenamiento sin estar en uso activo.
+  recommendation:
+    pt-br: |
+      Para mitigar os riscos associados a volumes EBS não instanciados recomendamos:
+      - Realizar Auditorias Regulares de Volumes EBS: Revisar regularmente a lista de volumes EBS no seu ambiente AWS e identificar volumes não instanciados.
+      - Investigar e Resolver Volumes Não Anexados: Determinar o propósito e a propriedade de volumes não instanciados. Se os volumes não forem mais necessários, excluí-los para liberar recursos de armazenamento. Se os volumes contiverem dados sensíveis, garantir que esses dados sejam devidamente protegidos ou migrados para volumes instanciados.
+      - Implementar Monitoramento e Alertas Automatizados: Utilizar as regras do AWS Config para monitorar continuamente e alertar sobre volumes EBS não instanciados.
+      - Estabelecer Políticas de Ciclo de Vida para Volumes EBS: Implementar políticas para excluir ou arquivar automaticamente volumes não instanciados após um determinado período, com base nos requisitos de retenção de dados da sua organização. Se o conteúdo do volume não instanciado for relevante, criar um snapshot do volume EBS antes da exclusão, permitindo a restauração dos dados no futuro, se necessário.
+      - Implementar Backup e Recuperação de Volumes: Garantir que todos os volumes EBS, incluindo os não instanciados, sejam regularmente copiados e incluídos em seus planos de recuperação de desastres.
+    en: |
+      To mitigate the risks associated with unattached EBS volumes, we recommend:
+      - Perform Regular Audits of EBS Volumes: Regularly review the list of EBS volumes in your AWS environment and identify unattached volumes.
+      - Investigate and Address Unattached Volumes: Determine the purpose and ownership of unattached volumes. If the volumes are no longer needed, delete them to free up storage resources. If the volumes contain sensitive data, ensure that the data is securely protected or migrated to active volumes.
+      - Implement Automated Monitoring and Alerts: Use AWS Config rules to continuously monitor and alert on unattached EBS volumes.
+      - Establish Lifecycle Policies for EBS Volumes: Implement policies to automatically delete or archive unattached volumes after a specific period, based on your organization's data retention requirements. If the content of the unattached volume is relevant, create a snapshot of the EBS volume before deletion to allow future data restoration if needed.
+      - Implement Backup and Recovery for Volumes: Ensure that all EBS volumes, including unattached ones, are regularly backed up and included in your disaster recovery plans.
+    es: |
+      Para mitigar los riesgos asociados con los volúmenes EBS no adjuntos, recomendamos:
+      - Realizar Auditorías Regulares de Volúmenes EBS: Revisar regularmente la lista de volúmenes EBS en su entorno AWS e identificar los volúmenes no adjuntos.
+      - Investigar y Resolver Volúmenes No Adjuntos: Determinar el propósito y la propiedad de los volúmenes no adjuntos. Si los volúmenes ya no son necesarios, eliminarlos para liberar recursos de almacenamiento. Si los volúmenes contienen datos sensibles, asegurarse de que estos estén protegidos o se migren a volúmenes activos.
+      - Implementar Monitoreo y Alertas Automatizadas: Utilizar las reglas de AWS Config para monitorear continuamente y alertar sobre volúmenes EBS no adjuntos.
+      - Establecer Políticas de Ciclo de Vida para Volúmenes EBS: Implementar políticas para eliminar o archivar automáticamente volúmenes no adjuntos después de un período específico, según los requisitos de retención de datos de su organización. Si el contenido del volumen no adjunto es relevante, crear un snapshot del volumen EBS antes de eliminarlo, permitiendo la restauración de los datos en el futuro si es necesario.
+      - Implementar Respaldo y Recuperación de Volúmenes: Garantizar que todos los volúmenes EBS, incluidos los no adjuntos, se respalden regularmente y se incluyan en sus planes de recuperación ante desastres.
+  references:
+    - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volumes.html
+    - https://docs.aws.amazon.com/config/latest/developerguide/ebs-volumes-attached.html
+    - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-snapshot.html
