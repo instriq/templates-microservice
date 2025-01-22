@@ -39,3 +39,4 @@ index:
     37: unencrypted-rds-instances
     38: s3-without-versioning
     39: unattached-ebs-volumes
+    40: improper-https-configuration
