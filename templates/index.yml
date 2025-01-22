@@ -40,3 +40,5 @@ index:
     38: s3-without-versioning
     39: unattached-ebs-volumes
     40: dated-ami-images
+    41: detail-unmonitored-ec2
+    40: improper-https-configuration
