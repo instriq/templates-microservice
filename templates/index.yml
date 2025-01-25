@@ -38,7 +38,8 @@ index:
     36: open-redirect
     37: unencrypted-rds-instances
     38: s3-without-versioning
-    39: unattached-ebs-volumes
-    40: dated-ami-images
-    41: detail-unmonitored-ec2
-    40: improper-https-configuration
+    39: ec2-instances-imdsv1
+    40: unattached-ebs-volumes
+    41: dated-ami-images
+    42: detail-unmonitored-ec2
+    43: improper-https-configuration
